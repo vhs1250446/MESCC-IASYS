@@ -1,8 +1,0 @@
-source;share/roadwork_student/hook/cmake_prefix_path.ps1
-source;share/roadwork_student/hook/cmake_prefix_path.dsv
-source;share/roadwork_student/hook/cmake_prefix_path.sh
-source;share/roadwork_student/local_setup.bash
-source;share/roadwork_student/local_setup.dsv
-source;share/roadwork_student/local_setup.ps1
-source;share/roadwork_student/local_setup.sh
-source;share/roadwork_student/local_setup.zsh

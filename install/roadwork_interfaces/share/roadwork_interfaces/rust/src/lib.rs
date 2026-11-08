@@ -1,1 +1,0 @@
-/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_interfaces/rosidl_generator_rs/roadwork_interfaces/rust/src/lib.rs

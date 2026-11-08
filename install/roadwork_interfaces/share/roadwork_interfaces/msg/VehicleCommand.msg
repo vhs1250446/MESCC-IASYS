@@ -1,1 +1,0 @@
-/home/sergioros/iasys_project_ws/MESCC-IASYS/src/roadwork_interfaces/msg/VehicleCommand.msg

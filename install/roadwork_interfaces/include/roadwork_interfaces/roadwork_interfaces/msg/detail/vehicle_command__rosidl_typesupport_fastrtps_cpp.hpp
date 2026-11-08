@@ -1,1 +1,0 @@
-/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_interfaces/rosidl_typesupport_fastrtps_cpp/roadwork_interfaces/msg/detail/vehicle_command__rosidl_typesupport_fastrtps_cpp.hpp

@@ -1,1 +1,0 @@
-/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_interfaces/ament_cmake_environment_hooks/local_setup.bash

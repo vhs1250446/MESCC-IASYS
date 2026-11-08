@@ -1,8 +1,0 @@
-{
-  "package_name": "roadwork_solution_msgs",
-  "non_idl_tuples": [
-    "/home/sergioros/iasys_project_ws/MESCC-IASYS/src/roadwork_solution_msgs:msg/PlanPoint.msg",
-    "/home/sergioros/iasys_project_ws/MESCC-IASYS/src/roadwork_solution_msgs:msg/Plan.msg",
-    "/home/sergioros/iasys_project_ws/MESCC-IASYS/src/roadwork_solution_msgs:msg/ActStatus.msg"
-  ]
-}

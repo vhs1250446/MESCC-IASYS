@@ -1,1 +1,0 @@
-/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_solution_msgs/rosidl_generator_cpp/roadwork_solution_msgs/msg/detail/act_status__struct.hpp

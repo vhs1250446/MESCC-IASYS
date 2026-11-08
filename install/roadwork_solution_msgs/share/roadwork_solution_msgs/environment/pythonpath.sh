@@ -1,1 +1,0 @@
-/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_solution_msgs/ament_cmake_environment_hooks/pythonpath.sh

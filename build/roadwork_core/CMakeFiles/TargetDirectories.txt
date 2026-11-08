@@ -1,9 +1,0 @@
-/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_core/CMakeFiles/uninstall.dir
-/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_core/CMakeFiles/roadwork_core_uninstall.dir
-/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_core/CMakeFiles/test.dir
-/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_core/CMakeFiles/edit_cache.dir
-/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_core/CMakeFiles/rebuild_cache.dir
-/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_core/CMakeFiles/list_install_components.dir
-/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_core/CMakeFiles/install.dir
-/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_core/CMakeFiles/install/local.dir
-/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_core/CMakeFiles/install/strip.dir

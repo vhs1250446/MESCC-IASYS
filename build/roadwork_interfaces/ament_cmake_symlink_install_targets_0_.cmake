@@ -1,1 +1,0 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_interfaces/rosidl_generator_py/roadwork_interfaces/roadwork_interfaces_s__rosidl_typesupport_fastrtps_c.so" "TARGETS" "roadwork_interfaces_s__rosidl_typesupport_fastrtps_c" "DESTINATION" "lib/python3.12/site-packages/roadwork_interfaces")

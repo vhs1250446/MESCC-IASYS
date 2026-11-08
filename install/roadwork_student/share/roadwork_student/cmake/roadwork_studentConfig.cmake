@@ -1,1 +1,0 @@
-/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_student/ament_cmake_core/roadwork_studentConfig.cmake

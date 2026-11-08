@@ -1,1 +1,0 @@
-/home/sergioros/iasys_project_ws/MESCC-IASYS/src/roadwork_core/include/roadwork_core/types.hpp

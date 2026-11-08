@@ -1,8 +1,0 @@
-msg/RadarDetection.idl
-msg/RadarDetection.msg
-msg/RadarDetections.idl
-msg/RadarDetections.msg
-msg/RoadworkBeacon.idl
-msg/RoadworkBeacon.msg
-msg/VehicleCommand.idl
-msg/VehicleCommand.msg
