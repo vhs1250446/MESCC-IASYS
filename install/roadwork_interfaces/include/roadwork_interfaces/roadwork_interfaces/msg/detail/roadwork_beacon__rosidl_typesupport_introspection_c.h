@@ -1,0 +1,1 @@
+/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_interfaces/rosidl_typesupport_introspection_c/roadwork_interfaces/msg/detail/roadwork_beacon__rosidl_typesupport_introspection_c.h

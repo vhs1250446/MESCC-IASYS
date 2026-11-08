@@ -1,0 +1,57 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from roadwork_solution_msgs/msg/Plan.msg
+// generated code does not contain a copyright notice
+
+#include "builtin_interfaces/msg/Time.idl"
+#include "roadwork_solution_msgs/msg/PlanPoint.idl"
+#include "std_msgs/msg/Header.idl"
+
+module roadwork_solution_msgs {
+  module msg {
+    module Plan_Constants {
+      @verbatim (language="comment", text=
+        "brake to standstill now; ignore path")
+      const uint8 MODE_STOP = 0;
+      @verbatim (language="comment", text=
+        "track path under speed profile and constraints")
+      const uint8 MODE_TRACK = 1;
+    };
+    struct Plan {
+      @verbatim (language="comment", text=
+        "stamp: sim time of computation; frame_id: \"map\"")
+      std_msgs::msg::Header header;
+
+      @verbatim (language="comment", text=
+        "stamp of the Scene this plan was built from")
+      builtin_interfaces::msg::Time scene_stamp;
+
+      @verbatim (language="comment", text=
+        "Act must not execute this plan after this instant")
+      builtin_interfaces::msg::Time valid_until;
+
+      @verbatim (language="comment", text=
+        "increments by one on every publication")
+      uint32 seq;
+
+      uint8 mode;
+
+      @verbatim (language="comment", text=
+        "ordered in travel direction; non-empty if MODE_TRACK")
+      sequence<roadwork_solution_msgs::msg::PlanPoint> path;
+
+      @verbatim (language="comment", text=
+        "m/s, from beacon or nominal 4.0")
+      double speed_limit;
+
+      boolean has_stop_line;
+
+      @verbatim (language="comment", text=
+        "m, map; vehicle front (x + 0.9) must stay below it")
+      double stop_line_x;
+
+      @verbatim (language="comment", text=
+        "Plan's state name, for logs and traceability only")
+      string decision_state;
+    };
+  };
+};

@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "roadwork_solution_msgs__rs",
+		"source" : "/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_solution_msgs/roadwork_solution_msgs__rs"
+	}
+}

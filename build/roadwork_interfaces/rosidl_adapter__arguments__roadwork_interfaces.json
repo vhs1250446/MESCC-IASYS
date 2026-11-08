@@ -1,0 +1,9 @@
+{
+  "package_name": "roadwork_interfaces",
+  "non_idl_tuples": [
+    "/home/sergioros/iasys_project_ws/MESCC-IASYS/src/roadwork_interfaces:msg/VehicleCommand.msg",
+    "/home/sergioros/iasys_project_ws/MESCC-IASYS/src/roadwork_interfaces:msg/RoadworkBeacon.msg",
+    "/home/sergioros/iasys_project_ws/MESCC-IASYS/src/roadwork_interfaces:msg/RadarDetection.msg",
+    "/home/sergioros/iasys_project_ws/MESCC-IASYS/src/roadwork_interfaces:msg/RadarDetections.msg"
+  ]
+}

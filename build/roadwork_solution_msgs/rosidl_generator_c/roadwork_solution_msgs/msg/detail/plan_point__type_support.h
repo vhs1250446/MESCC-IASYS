@@ -1,0 +1,36 @@
+// generated from rosidl_generator_c/resource/idl__type_support.h.em
+// with input from roadwork_solution_msgs:msg/PlanPoint.idl
+// generated code does not contain a copyright notice
+
+// IWYU pragma: private, include "roadwork_solution_msgs/msg/plan_point.h"
+
+
+#ifndef ROADWORK_SOLUTION_MSGS__MSG__DETAIL__PLAN_POINT__TYPE_SUPPORT_H_
+#define ROADWORK_SOLUTION_MSGS__MSG__DETAIL__PLAN_POINT__TYPE_SUPPORT_H_
+
+#include "rosidl_typesupport_interface/macros.h"
+
+#include "roadwork_solution_msgs/msg/rosidl_generator_c__visibility_control.h"
+
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+
+#include "rosidl_runtime_c/message_type_support_struct.h"
+
+// Forward declare the get type support functions for this type.
+ROSIDL_GENERATOR_C_PUBLIC_roadwork_solution_msgs
+const rosidl_message_type_support_t *
+ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
+  rosidl_typesupport_c,
+  roadwork_solution_msgs,
+  msg,
+  PlanPoint
+)(void);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif  // ROADWORK_SOLUTION_MSGS__MSG__DETAIL__PLAN_POINT__TYPE_SUPPORT_H_

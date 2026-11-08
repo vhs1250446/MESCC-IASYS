@@ -1,0 +1,6 @@
+msg/ActStatus.idl
+msg/ActStatus.msg
+msg/Plan.idl
+msg/Plan.msg
+msg/PlanPoint.idl
+msg/PlanPoint.msg

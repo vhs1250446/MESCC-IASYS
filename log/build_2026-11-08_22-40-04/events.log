@@ -1,0 +1,792 @@
+[0.000000] (-) TimerEvent: {}
+[0.000731] (roadwork_core) JobQueued: {'identifier': 'roadwork_core', 'dependencies': OrderedDict()}
+[0.000765] (roadwork_interfaces) JobQueued: {'identifier': 'roadwork_interfaces', 'dependencies': OrderedDict()}
+[0.000786] (roadwork_student) JobQueued: {'identifier': 'roadwork_student', 'dependencies': OrderedDict()}
+[0.000802] (roadwork_sim) JobQueued: {'identifier': 'roadwork_sim', 'dependencies': OrderedDict({'roadwork_core': '/home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_core', 'roadwork_interfaces': '/home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces'})}
+[0.000824] (roadwork_core) JobStarted: {'identifier': 'roadwork_core'}
+[0.006756] (roadwork_interfaces) JobStarted: {'identifier': 'roadwork_interfaces'}
+[0.012174] (roadwork_student) JobStarted: {'identifier': 'roadwork_student'}
+[0.019605] (roadwork_core) JobProgress: {'identifier': 'roadwork_core', 'progress': 'cmake'}
+[0.020591] (roadwork_core) Command: {'cmd': ['/usr/bin/cmake', '/home/sergioros/iasys_project_ws/MESCC-IASYS/src/roadwork_core', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_core'], 'cwd': '/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_core', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'sergioros', 'SSH_AGENT_PID': '13518', 'XDG_SESSION_TYPE': 'wayland', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/sergioros', 'OLDPWD': '/home/sergioros/iasys_project_ws', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '1490', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'sergioros', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'sergioros', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/bin:/opt/nvim/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/sergioros-Standard-PC-Q35-ICH9-2009:@/tmp/.ICE-unix/1378,unix/sergioros-Standard-PC-Q35-ICH9-2009:/tmp/.ICE-unix/1378', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/4a055413_0b39_4381_b8bd_6dd75e9b3a03', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'RMW_IMPLEMENTATION': 'rmw_fastrtps_cpp', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.OKMVY3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.159', 'SSH_AUTH_SOCK': '/tmp/ssh-guTPilrSXxa9/agent.13517', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_core', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[0.027581] (roadwork_interfaces) JobProgress: {'identifier': 'roadwork_interfaces', 'progress': 'cmake'}
+[0.027726] (roadwork_interfaces) Command: {'cmd': ['/usr/bin/cmake', '/home/sergioros/iasys_project_ws/MESCC-IASYS/src/roadwork_interfaces', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces'], 'cwd': '/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_interfaces', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'sergioros', 'SSH_AGENT_PID': '13518', 'XDG_SESSION_TYPE': 'wayland', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/sergioros', 'OLDPWD': '/home/sergioros/iasys_project_ws', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '1490', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'sergioros', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'sergioros', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/bin:/opt/nvim/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/sergioros-Standard-PC-Q35-ICH9-2009:@/tmp/.ICE-unix/1378,unix/sergioros-Standard-PC-Q35-ICH9-2009:/tmp/.ICE-unix/1378', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/4a055413_0b39_4381_b8bd_6dd75e9b3a03', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'RMW_IMPLEMENTATION': 'rmw_fastrtps_cpp', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.OKMVY3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.159', 'SSH_AUTH_SOCK': '/tmp/ssh-guTPilrSXxa9/agent.13517', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_interfaces', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[0.033808] (roadwork_student) JobProgress: {'identifier': 'roadwork_student', 'progress': 'cmake'}
+[0.035351] (roadwork_student) Command: {'cmd': ['/usr/bin/cmake', '/home/sergioros/iasys_project_ws/MESCC-IASYS/src/roadwork_student', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_student'], 'cwd': '/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_student', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'sergioros', 'SSH_AGENT_PID': '13518', 'XDG_SESSION_TYPE': 'wayland', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/sergioros', 'OLDPWD': '/home/sergioros/iasys_project_ws', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '1490', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'sergioros', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'sergioros', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/bin:/opt/nvim/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/sergioros-Standard-PC-Q35-ICH9-2009:@/tmp/.ICE-unix/1378,unix/sergioros-Standard-PC-Q35-ICH9-2009:/tmp/.ICE-unix/1378', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/4a055413_0b39_4381_b8bd_6dd75e9b3a03', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'RMW_IMPLEMENTATION': 'rmw_fastrtps_cpp', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.OKMVY3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.159', 'SSH_AUTH_SOCK': '/tmp/ssh-guTPilrSXxa9/agent.13517', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_student', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[0.099982] (-) TimerEvent: {}
+[0.192380] (roadwork_interfaces) StdoutLine: {'line': b'-- The C compiler identification is GNU 13.3.0\n'}
+[0.193980] (roadwork_student) StdoutLine: {'line': b'-- The C compiler identification is GNU 13.3.0\n'}
+[0.194145] (roadwork_core) StdoutLine: {'line': b'-- The C compiler identification is GNU 13.3.0\n'}
+[0.201495] (-) TimerEvent: {}
+[0.301754] (-) TimerEvent: {}
+[0.332625] (roadwork_student) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 13.3.0\n'}
+[0.336755] (roadwork_core) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 13.3.0\n'}
+[0.340263] (roadwork_interfaces) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 13.3.0\n'}
+[0.364238] (roadwork_interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.366365] (roadwork_core) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.366685] (roadwork_student) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.401911] (-) TimerEvent: {}
+[0.488680] (roadwork_student) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.496864] (roadwork_interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.498678] (roadwork_core) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.499352] (roadwork_student) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.499663] (roadwork_student) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.501126] (roadwork_student) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.501965] (-) TimerEvent: {}
+[0.507432] (roadwork_interfaces) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.507734] (roadwork_interfaces) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.507816] (roadwork_interfaces) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.511295] (roadwork_core) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.511412] (roadwork_core) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.511474] (roadwork_core) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.513118] (roadwork_student) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.516951] (roadwork_interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.521757] (roadwork_core) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.602107] (-) TimerEvent: {}
+[0.651346] (roadwork_interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.660691] (roadwork_interfaces) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.662369] (roadwork_interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.662440] (roadwork_interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.663747] (roadwork_student) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.671275] (roadwork_core) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.673421] (roadwork_student) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.673852] (roadwork_student) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.674391] (roadwork_student) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.675117] (roadwork_interfaces) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[0.679327] (roadwork_student) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[0.679466] (roadwork_core) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.679557] (roadwork_core) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.680080] (roadwork_core) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.682928] (roadwork_core) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[0.702255] (-) TimerEvent: {}
+[0.802581] (-) TimerEvent: {}
+[0.850433] (roadwork_student) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[0.860654] (roadwork_interfaces) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[0.863629] (roadwork_core) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[0.903252] (-) TimerEvent: {}
+[0.966848] (roadwork_student) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.967517] (roadwork_interfaces) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.985327] (roadwork_core) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[1.003729] (-) TimerEvent: {}
+[1.018972] (roadwork_interfaces) StdoutLine: {'line': b'-- Found std_msgs: 5.3.8 (/opt/ros/jazzy/share/std_msgs/cmake)\n'}
+[1.019301] (roadwork_student) StdoutLine: {'line': b'-- Found rclcpp: 28.1.22 (/opt/ros/jazzy/share/rclcpp/cmake)\n'}
+[1.080823] (roadwork_student) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)\n'}
+[1.081071] (roadwork_interfaces) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)\n'}
+[1.097757] (roadwork_interfaces) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[1.097990] (roadwork_student) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[1.103823] (-) TimerEvent: {}
+[1.123928] (roadwork_student) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.125285] (roadwork_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.130303] (roadwork_core) StdoutLine: {'line': b'-- Configuring done (1.1s)\n'}
+[1.134319] (roadwork_core) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[1.136366] (roadwork_core) StdoutLine: {'line': b'-- Build files have been written to: /home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_core\n'}
+[1.143772] (roadwork_core) CommandEnded: {'returncode': 0}
+[1.144268] (roadwork_core) JobProgress: {'identifier': 'roadwork_core', 'progress': 'build'}
+[1.146909] (roadwork_core) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_core', '--', '-j4', '-l4'], 'cwd': '/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_core', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'sergioros', 'SSH_AGENT_PID': '13518', 'XDG_SESSION_TYPE': 'wayland', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/sergioros', 'OLDPWD': '/home/sergioros/iasys_project_ws', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '1490', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'sergioros', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'sergioros', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/bin:/opt/nvim/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/sergioros-Standard-PC-Q35-ICH9-2009:@/tmp/.ICE-unix/1378,unix/sergioros-Standard-PC-Q35-ICH9-2009:/tmp/.ICE-unix/1378', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/4a055413_0b39_4381_b8bd_6dd75e9b3a03', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'RMW_IMPLEMENTATION': 'rmw_fastrtps_cpp', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.OKMVY3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.159', 'SSH_AUTH_SOCK': '/tmp/ssh-guTPilrSXxa9/agent.13517', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_core', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[1.150527] (roadwork_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.150780] (roadwork_student) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.192939] (roadwork_interfaces) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.6.1 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)\n'}
+[1.197855] (roadwork_core) CommandEnded: {'returncode': 0}
+[1.198184] (roadwork_core) JobProgress: {'identifier': 'roadwork_core', 'progress': 'install'}
+[1.203901] (-) TimerEvent: {}
+[1.211553] (roadwork_core) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_core'], 'cwd': '/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_core', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'sergioros', 'SSH_AGENT_PID': '13518', 'XDG_SESSION_TYPE': 'wayland', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/sergioros', 'OLDPWD': '/home/sergioros/iasys_project_ws', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '1490', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'sergioros', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'sergioros', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/bin:/opt/nvim/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/sergioros-Standard-PC-Q35-ICH9-2009:@/tmp/.ICE-unix/1378,unix/sergioros-Standard-PC-Q35-ICH9-2009:/tmp/.ICE-unix/1378', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/4a055413_0b39_4381_b8bd_6dd75e9b3a03', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'RMW_IMPLEMENTATION': 'rmw_fastrtps_cpp', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.OKMVY3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.159', 'SSH_AUTH_SOCK': '/tmp/ssh-guTPilrSXxa9/agent.13517', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_core', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[1.224880] (roadwork_interfaces) StdoutLine: {'line': b'-- Found rosidl_adapter: 4.6.9 (/opt/ros/jazzy/share/rosidl_adapter/cmake)\n'}
+[1.226849] (roadwork_core) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[1.227436] (roadwork_core) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[1.228394] (roadwork_core) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_core/include/roadwork_core/simulator.hpp\n'}
+[1.247137] (roadwork_core) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_core/include/roadwork_core/types.hpp\n'}
+[1.258394] (roadwork_student) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 7.3.4 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)\n'}
+[1.260005] (roadwork_core) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_core/share/ament_index/resource_index/package_run_dependencies/roadwork_core\n'}
+[1.260802] (roadwork_student) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 8.4.4 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)\n'}
+[1.271826] (roadwork_core) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_core/share/ament_index/resource_index/parent_prefix_path/roadwork_core\n'}
+[1.280400] (roadwork_core) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_core/share/roadwork_core/environment/ament_prefix_path.sh\n'}
+[1.289612] (roadwork_core) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_core/share/roadwork_core/environment/ament_prefix_path.dsv\n'}
+[1.300064] (roadwork_core) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_core/share/roadwork_core/environment/path.sh\n'}
+[1.303998] (-) TimerEvent: {}
+[1.312352] (roadwork_core) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_core/share/roadwork_core/environment/path.dsv\n'}
+[1.326437] (roadwork_core) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_core/share/roadwork_core/local_setup.bash\n'}
+[1.338534] (roadwork_core) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_core/share/roadwork_core/local_setup.sh\n'}
+[1.355596] (roadwork_core) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_core/share/roadwork_core/local_setup.zsh\n'}
+[1.370327] (roadwork_core) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_core/share/roadwork_core/local_setup.dsv\n'}
+[1.379674] (roadwork_core) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_core/share/roadwork_core/package.dsv\n'}
+[1.391070] (roadwork_core) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_core/share/ament_index/resource_index/packages/roadwork_core\n'}
+[1.393291] (roadwork_student) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  \n'}
+[1.400229] (roadwork_core) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_core/share/roadwork_core/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[1.404078] (-) TimerEvent: {}
+[1.414955] (roadwork_core) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_core/share/roadwork_core/cmake/roadwork_coreConfig.cmake\n'}
+[1.419900] (roadwork_student) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") \n'}
+[1.432329] (roadwork_core) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_core/share/roadwork_core/cmake/roadwork_coreConfig-version.cmake\n'}
+[1.448119] (roadwork_core) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_core/share/roadwork_core/package.xml\n'}
+[1.465918] (roadwork_student) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.470038] (roadwork_core) CommandEnded: {'returncode': 0}
+[1.484918] (roadwork_core) JobEnded: {'identifier': 'roadwork_core', 'rc': 0}
+[1.504272] (-) TimerEvent: {}
+[1.605253] (-) TimerEvent: {}
+[1.696557] (roadwork_student) StdoutLine: {'line': b'-- Configuring done (1.6s)\n'}
+[1.705334] (-) TimerEvent: {}
+[1.730769] (roadwork_student) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[1.743340] (roadwork_student) StdoutLine: {'line': b'-- Build files have been written to: /home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_student\n'}
+[1.759090] (roadwork_student) CommandEnded: {'returncode': 0}
+[1.759624] (roadwork_student) JobProgress: {'identifier': 'roadwork_student', 'progress': 'build'}
+[1.759852] (roadwork_student) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_student', '--', '-j4', '-l4'], 'cwd': '/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_student', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'sergioros', 'SSH_AGENT_PID': '13518', 'XDG_SESSION_TYPE': 'wayland', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/sergioros', 'OLDPWD': '/home/sergioros/iasys_project_ws', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '1490', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'sergioros', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'sergioros', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/bin:/opt/nvim/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/sergioros-Standard-PC-Q35-ICH9-2009:@/tmp/.ICE-unix/1378,unix/sergioros-Standard-PC-Q35-ICH9-2009:/tmp/.ICE-unix/1378', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/4a055413_0b39_4381_b8bd_6dd75e9b3a03', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'RMW_IMPLEMENTATION': 'rmw_fastrtps_cpp', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.OKMVY3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.159', 'SSH_AUTH_SOCK': '/tmp/ssh-guTPilrSXxa9/agent.13517', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_student', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[1.806007] (-) TimerEvent: {}
+[1.820548] (roadwork_student) StdoutLine: {'line': b'[ 16%] \x1b[32mBuilding CXX object CMakeFiles/act_node.dir/src/act_node.cpp.o\x1b[0m\n'}
+[1.821150] (roadwork_student) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/sense_node.dir/src/sense_node.cpp.o\x1b[0m\n'}
+[1.827981] (roadwork_student) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/plan_node.dir/src/plan_node.cpp.o\x1b[0m\n'}
+[1.906113] (-) TimerEvent: {}
+[1.943582] (roadwork_interfaces) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.12.2 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)\n'}
+[2.006238] (-) TimerEvent: {}
+[2.106754] (-) TimerEvent: {}
+[2.207035] (-) TimerEvent: {}
+[2.307958] (-) TimerEvent: {}
+[2.408273] (-) TimerEvent: {}
+[2.508596] (-) TimerEvent: {}
+[2.611382] (-) TimerEvent: {}
+[2.711760] (-) TimerEvent: {}
+[2.812266] (-) TimerEvent: {}
+[2.912566] (-) TimerEvent: {}
+[2.950387] (roadwork_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[3.012682] (-) TimerEvent: {}
+[3.112986] (-) TimerEvent: {}
+[3.214268] (-) TimerEvent: {}
+[3.308576] (roadwork_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[3.314472] (-) TimerEvent: {}
+[3.323923] (roadwork_interfaces) StdoutLine: {'line': b'-- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)\n'}
+[3.415271] (-) TimerEvent: {}
+[3.501061] (roadwork_interfaces) StdoutLine: {'line': b'-- Found PythonExtra: /usr/bin/python3  \n'}
+[3.515369] (-) TimerEvent: {}
+[3.621167] (-) TimerEvent: {}
+[3.726856] (-) TimerEvent: {}
+[3.835391] (-) TimerEvent: {}
+[3.935789] (-) TimerEvent: {}
+[4.036422] (-) TimerEvent: {}
+[4.130709] (roadwork_interfaces) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed \n'}
+[4.136523] (-) TimerEvent: {}
+[4.241652] (-) TimerEvent: {}
+[4.250873] (roadwork_interfaces) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[4.270269] (roadwork_interfaces) StdoutLine: {'line': b'-- Configuring done (4.2s)\n'}
+[4.326719] (roadwork_interfaces) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[4.339335] (roadwork_interfaces) StdoutLine: {'line': b'-- Build files have been written to: /home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_interfaces\n'}
+[4.342239] (-) TimerEvent: {}
+[4.368923] (roadwork_interfaces) CommandEnded: {'returncode': 0}
+[4.370920] (roadwork_interfaces) JobProgress: {'identifier': 'roadwork_interfaces', 'progress': 'build'}
+[4.371546] (roadwork_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_interfaces', '--', '-j4', '-l4'], 'cwd': '/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_interfaces', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'sergioros', 'SSH_AGENT_PID': '13518', 'XDG_SESSION_TYPE': 'wayland', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/sergioros', 'OLDPWD': '/home/sergioros/iasys_project_ws', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '1490', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'sergioros', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'sergioros', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/bin:/opt/nvim/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/sergioros-Standard-PC-Q35-ICH9-2009:@/tmp/.ICE-unix/1378,unix/sergioros-Standard-PC-Q35-ICH9-2009:/tmp/.ICE-unix/1378', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/4a055413_0b39_4381_b8bd_6dd75e9b3a03', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'RMW_IMPLEMENTATION': 'rmw_fastrtps_cpp', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.OKMVY3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.159', 'SSH_AUTH_SOCK': '/tmp/ssh-guTPilrSXxa9/agent.13517', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_interfaces', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[4.445150] (-) TimerEvent: {}
+[4.483845] (roadwork_interfaces) StdoutLine: {'line': b'[  1%] \x1b[34m\x1b[1mGenerating type hashes for ROS interfaces\x1b[0m\n'}
+[4.488650] (roadwork_interfaces) StdoutLine: {'line': b'[  3%] \x1b[34m\x1b[1mGenerating Rust code for ROS interfaces\x1b[0m\n'}
+[4.518332] (roadwork_interfaces) StdoutLine: {'line': b'[  3%] Built target ament_cmake_python_symlink_roadwork_interfaces\n'}
+[4.545268] (-) TimerEvent: {}
+[4.645558] (-) TimerEvent: {}
+[4.748281] (-) TimerEvent: {}
+[4.849280] (-) TimerEvent: {}
+[4.896601] (roadwork_interfaces) StdoutLine: {'line': b'running egg_info\n'}
+[4.899815] (roadwork_interfaces) StdoutLine: {'line': b'creating roadwork_interfaces.egg-info\n'}
+[4.928311] (roadwork_interfaces) StdoutLine: {'line': b'[  3%] Built target roadwork_interfaces__rosidl_generator_type_description\n'}
+[4.940654] (roadwork_interfaces) StdoutLine: {'line': b'writing roadwork_interfaces.egg-info/PKG-INFO\n'}
+[4.940898] (roadwork_interfaces) StdoutLine: {'line': b'writing dependency_links to roadwork_interfaces.egg-info/dependency_links.txt\n'}
+[4.945303] (roadwork_interfaces) StdoutLine: {'line': b'writing top-level names to roadwork_interfaces.egg-info/top_level.txt\n'}
+[4.945423] (roadwork_interfaces) StdoutLine: {'line': b"writing manifest file 'roadwork_interfaces.egg-info/SOURCES.txt'\n"}
+[4.948229] (roadwork_interfaces) StdoutLine: {'line': b'[  4%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[4.949346] (-) TimerEvent: {}
+[4.999097] (roadwork_interfaces) StdoutLine: {'line': b'[  6%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[5.049462] (-) TimerEvent: {}
+[5.071240] (roadwork_interfaces) StdoutLine: {'line': b"reading manifest file 'roadwork_interfaces.egg-info/SOURCES.txt'\n"}
+[5.076372] (roadwork_interfaces) StdoutLine: {'line': b"writing manifest file 'roadwork_interfaces.egg-info/SOURCES.txt'\n"}
+[5.149589] (-) TimerEvent: {}
+[5.247354] (roadwork_interfaces) StdoutLine: {'line': b'[  6%] Built target ament_cmake_python_build_roadwork_interfaces_egg\n'}
+[5.251232] (-) TimerEvent: {}
+[5.277046] (roadwork_interfaces) StdoutLine: {'line': b'[  6%] Built target roadwork_interfaces__rs\n'}
+[5.351351] (-) TimerEvent: {}
+[5.451635] (-) TimerEvent: {}
+[5.556263] (-) TimerEvent: {}
+[5.656571] (-) TimerEvent: {}
+[5.758249] (-) TimerEvent: {}
+[5.823955] (roadwork_interfaces) StdoutLine: {'line': b'[  6%] Built target roadwork_interfaces__cpp\n'}
+[5.858368] (-) TimerEvent: {}
+[5.958687] (-) TimerEvent: {}
+[6.058991] (-) TimerEvent: {}
+[6.074888] (roadwork_interfaces) StdoutLine: {'line': b'[  7%] \x1b[32mBuilding C object CMakeFiles/roadwork_interfaces__rosidl_generator_c.dir/rosidl_generator_c/roadwork_interfaces/msg/detail/vehicle_command__description.c.o\x1b[0m\n'}
+[6.098352] (roadwork_interfaces) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding C object CMakeFiles/roadwork_interfaces__rosidl_generator_c.dir/rosidl_generator_c/roadwork_interfaces/msg/detail/roadwork_beacon__description.c.o\x1b[0m\n'}
+[6.112324] (roadwork_interfaces) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding C object CMakeFiles/roadwork_interfaces__rosidl_generator_c.dir/rosidl_generator_c/roadwork_interfaces/msg/detail/vehicle_command__functions.c.o\x1b[0m\n'}
+[6.117593] (roadwork_interfaces) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding C object CMakeFiles/roadwork_interfaces__rosidl_generator_c.dir/rosidl_generator_c/roadwork_interfaces/msg/detail/vehicle_command__type_support.c.o\x1b[0m\n'}
+[6.159109] (-) TimerEvent: {}
+[6.194346] (roadwork_interfaces) StdoutLine: {'line': b'[ 13%] \x1b[32mBuilding C object CMakeFiles/roadwork_interfaces__rosidl_generator_c.dir/rosidl_generator_c/roadwork_interfaces/msg/detail/roadwork_beacon__functions.c.o\x1b[0m\n'}
+[6.217253] (roadwork_interfaces) StdoutLine: {'line': b'[ 15%] \x1b[32mBuilding C object CMakeFiles/roadwork_interfaces__rosidl_generator_c.dir/rosidl_generator_c/roadwork_interfaces/msg/detail/radar_detection__description.c.o\x1b[0m\n'}
+[6.217481] (roadwork_interfaces) StdoutLine: {'line': b'[ 16%] \x1b[32mBuilding C object CMakeFiles/roadwork_interfaces__rosidl_generator_c.dir/rosidl_generator_c/roadwork_interfaces/msg/detail/roadwork_beacon__type_support.c.o\x1b[0m\n'}
+[6.259238] (-) TimerEvent: {}
+[6.277820] (roadwork_interfaces) StdoutLine: {'line': b'[ 18%] \x1b[32mBuilding C object CMakeFiles/roadwork_interfaces__rosidl_generator_c.dir/rosidl_generator_c/roadwork_interfaces/msg/detail/radar_detection__functions.c.o\x1b[0m\n'}
+[6.311278] (roadwork_interfaces) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding C object CMakeFiles/roadwork_interfaces__rosidl_generator_c.dir/rosidl_generator_c/roadwork_interfaces/msg/detail/radar_detection__type_support.c.o\x1b[0m\n'}
+[6.321584] (roadwork_interfaces) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding C object CMakeFiles/roadwork_interfaces__rosidl_generator_c.dir/rosidl_generator_c/roadwork_interfaces/msg/detail/radar_detections__description.c.o\x1b[0m\n'}
+[6.341354] (roadwork_interfaces) StdoutLine: {'line': b'[ 23%] \x1b[32mBuilding C object CMakeFiles/roadwork_interfaces__rosidl_generator_c.dir/rosidl_generator_c/roadwork_interfaces/msg/detail/radar_detections__functions.c.o\x1b[0m\n'}
+[6.362270] (-) TimerEvent: {}
+[6.425768] (roadwork_interfaces) StdoutLine: {'line': b'[ 24%] \x1b[32mBuilding C object CMakeFiles/roadwork_interfaces__rosidl_generator_c.dir/rosidl_generator_c/roadwork_interfaces/msg/detail/radar_detections__type_support.c.o\x1b[0m\n'}
+[6.462402] (-) TimerEvent: {}
+[6.467644] (roadwork_interfaces) StdoutLine: {'line': b'[ 26%] \x1b[32m\x1b[1mLinking C shared library libroadwork_interfaces__rosidl_generator_c.so\x1b[0m\n'}
+[6.533544] (roadwork_interfaces) StdoutLine: {'line': b'[ 26%] Built target roadwork_interfaces__rosidl_generator_c\n'}
+[6.553260] (roadwork_interfaces) StdoutLine: {'line': b'[ 27%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[6.561295] (roadwork_interfaces) StdoutLine: {'line': b'[ 29%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[6.561517] (roadwork_interfaces) StdoutLine: {'line': b'[ 30%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[6.562468] (-) TimerEvent: {}
+[6.563610] (roadwork_interfaces) StdoutLine: {'line': b'[ 32%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[6.662581] (-) TimerEvent: {}
+[6.762870] (-) TimerEvent: {}
+[6.863175] (-) TimerEvent: {}
+[6.963474] (-) TimerEvent: {}
+[7.063768] (-) TimerEvent: {}
+[7.164067] (-) TimerEvent: {}
+[7.265270] (-) TimerEvent: {}
+[7.295344] (roadwork_student) StdoutLine: {'line': b'[ 66%] \x1b[32m\x1b[1mLinking CXX executable plan_node\x1b[0m\n'}
+[7.366263] (roadwork_interfaces) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/roadwork_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/roadwork_interfaces/msg/vehicle_command__type_support.cpp.o\x1b[0m\n'}
+[7.366482] (-) TimerEvent: {}
+[7.400323] (roadwork_student) StdoutLine: {'line': b'[ 83%] \x1b[32m\x1b[1mLinking CXX executable act_node\x1b[0m\n'}
+[7.436655] (roadwork_interfaces) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object CMakeFiles/roadwork_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/roadwork_interfaces/msg/detail/vehicle_command__type_support.cpp.o\x1b[0m\n'}
+[7.446643] (roadwork_interfaces) StdoutLine: {'line': b'[ 36%] \x1b[32mBuilding C object CMakeFiles/roadwork_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/roadwork_interfaces/msg/detail/vehicle_command__type_support.c.o\x1b[0m\n'}
+[7.458433] (roadwork_interfaces) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object CMakeFiles/roadwork_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/roadwork_interfaces/msg/roadwork_beacon__type_support.cpp.o\x1b[0m\n'}
+[7.467992] (roadwork_interfaces) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/roadwork_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/roadwork_interfaces/msg/detail/dds_fastrtps/vehicle_command__type_support.cpp.o\x1b[0m\n'}
+[7.468373] (-) TimerEvent: {}
+[7.568811] (-) TimerEvent: {}
+[7.597995] (roadwork_interfaces) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding C object CMakeFiles/roadwork_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/roadwork_interfaces/msg/detail/roadwork_beacon__type_support.c.o\x1b[0m\n'}
+[7.613408] (roadwork_interfaces) StdoutLine: {'line': b'[ 43%] \x1b[32mBuilding CXX object CMakeFiles/roadwork_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/roadwork_interfaces/msg/radar_detection__type_support.cpp.o\x1b[0m\n'}
+[7.668897] (-) TimerEvent: {}
+[7.681487] (roadwork_interfaces) StdoutLine: {'line': b'[ 44%] \x1b[32mBuilding C object CMakeFiles/roadwork_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/roadwork_interfaces/msg/detail/radar_detection__type_support.c.o\x1b[0m\n'}
+[7.740982] (roadwork_interfaces) StdoutLine: {'line': b'[ 46%] \x1b[32mBuilding CXX object CMakeFiles/roadwork_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/roadwork_interfaces/msg/radar_detections__type_support.cpp.o\x1b[0m\n'}
+[7.756884] (roadwork_student) StdoutLine: {'line': b'[ 83%] Built target act_node\n'}
+[7.769016] (-) TimerEvent: {}
+[7.777685] (roadwork_student) StdoutLine: {'line': b'[ 83%] Built target plan_node\n'}
+[7.784243] (roadwork_interfaces) StdoutLine: {'line': b'[ 47%] \x1b[32mBuilding C object CMakeFiles/roadwork_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/roadwork_interfaces/msg/detail/radar_detections__type_support.c.o\x1b[0m\n'}
+[7.812591] (roadwork_student) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable sense_node\x1b[0m\n'}
+[7.845335] (roadwork_interfaces) StdoutLine: {'line': b'[ 49%] \x1b[32m\x1b[1mLinking C shared library libroadwork_interfaces__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[7.845590] (roadwork_interfaces) StdoutLine: {'line': b'[ 50%] \x1b[32m\x1b[1mLinking CXX shared library libroadwork_interfaces__rosidl_typesupport_c.so\x1b[0m\n'}
+[7.870295] (-) TimerEvent: {}
+[7.906164] (roadwork_interfaces) StdoutLine: {'line': b'[ 50%] Built target roadwork_interfaces__rosidl_typesupport_c\n'}
+[7.931343] (roadwork_interfaces) StdoutLine: {'line': b'[ 52%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[7.942136] (roadwork_interfaces) StdoutLine: {'line': b'[ 52%] Built target roadwork_interfaces__rosidl_typesupport_introspection_c\n'}
+[7.965177] (roadwork_interfaces) StdoutLine: {'line': b'[ 53%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[7.965917] (roadwork_interfaces) StdoutLine: {'line': b'[ 55%] \x1b[32mBuilding CXX object CMakeFiles/roadwork_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/roadwork_interfaces/msg/detail/roadwork_beacon__type_support.cpp.o\x1b[0m\n'}
+[7.970387] (-) TimerEvent: {}
+[8.058445] (roadwork_student) StdoutLine: {'line': b'[100%] Built target sense_node\n'}
+[8.070491] (-) TimerEvent: {}
+[8.091497] (roadwork_student) CommandEnded: {'returncode': 0}
+[8.096110] (roadwork_student) JobProgress: {'identifier': 'roadwork_student', 'progress': 'install'}
+[8.096399] (roadwork_student) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_student'], 'cwd': '/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_student', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'sergioros', 'SSH_AGENT_PID': '13518', 'XDG_SESSION_TYPE': 'wayland', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/sergioros', 'OLDPWD': '/home/sergioros/iasys_project_ws', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '1490', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'sergioros', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'sergioros', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/bin:/opt/nvim/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/sergioros-Standard-PC-Q35-ICH9-2009:@/tmp/.ICE-unix/1378,unix/sergioros-Standard-PC-Q35-ICH9-2009:/tmp/.ICE-unix/1378', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/4a055413_0b39_4381_b8bd_6dd75e9b3a03', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'RMW_IMPLEMENTATION': 'rmw_fastrtps_cpp', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.OKMVY3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.159', 'SSH_AUTH_SOCK': '/tmp/ssh-guTPilrSXxa9/agent.13517', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_student', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[8.125248] (roadwork_student) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[8.128251] (roadwork_student) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[8.130270] (roadwork_student) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_student/lib/roadwork_student/sense_node\n'}
+[8.169287] (roadwork_student) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_student/lib/roadwork_student/plan_node\n'}
+[8.170568] (-) TimerEvent: {}
+[8.177033] (roadwork_interfaces) StdoutLine: {'line': b'[ 56%] \x1b[32mBuilding CXX object CMakeFiles/roadwork_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/roadwork_interfaces/msg/detail/dds_fastrtps/roadwork_beacon__type_support.cpp.o\x1b[0m\n'}
+[8.205252] (roadwork_student) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_student/lib/roadwork_student/act_node\n'}
+[8.236050] (roadwork_student) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_student/share/ament_index/resource_index/package_run_dependencies/roadwork_student\n'}
+[8.257901] (roadwork_student) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_student/share/ament_index/resource_index/parent_prefix_path/roadwork_student\n'}
+[8.270680] (-) TimerEvent: {}
+[8.276653] (roadwork_student) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_student/share/roadwork_student/environment/ament_prefix_path.sh\n'}
+[8.308910] (roadwork_student) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_student/share/roadwork_student/environment/ament_prefix_path.dsv\n'}
+[8.338738] (roadwork_student) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_student/share/roadwork_student/environment/path.sh\n'}
+[8.352423] (roadwork_interfaces) StdoutLine: {'line': b'[ 58%] \x1b[32mBuilding CXX object CMakeFiles/roadwork_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/roadwork_interfaces/msg/vehicle_command__type_support.cpp.o\x1b[0m\n'}
+[8.358146] (roadwork_student) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_student/share/roadwork_student/environment/path.dsv\n'}
+[8.371255] (-) TimerEvent: {}
+[8.380784] (roadwork_student) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_student/share/roadwork_student/local_setup.bash\n'}
+[8.396655] (roadwork_student) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_student/share/roadwork_student/local_setup.sh\n'}
+[8.414341] (roadwork_student) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_student/share/roadwork_student/local_setup.zsh\n'}
+[8.416292] (roadwork_interfaces) StdoutLine: {'line': b'[ 60%] \x1b[32mBuilding CXX object CMakeFiles/roadwork_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/roadwork_interfaces/msg/detail/radar_detection__type_support.cpp.o\x1b[0m\n'}
+[8.441332] (roadwork_student) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_student/share/roadwork_student/local_setup.dsv\n'}
+[8.457612] (roadwork_student) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_student/share/roadwork_student/package.dsv\n'}
+[8.470256] (roadwork_student) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_student/share/ament_index/resource_index/packages/roadwork_student\n'}
+[8.471336] (-) TimerEvent: {}
+[8.485341] (roadwork_student) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_student/share/roadwork_student/cmake/roadwork_studentConfig.cmake\n'}
+[8.516339] (roadwork_student) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_student/share/roadwork_student/cmake/roadwork_studentConfig-version.cmake\n'}
+[8.543267] (roadwork_student) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_student/share/roadwork_student/package.xml\n'}
+[8.549145] (roadwork_interfaces) StdoutLine: {'line': b'[ 61%] \x1b[32mBuilding CXX object CMakeFiles/roadwork_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/roadwork_interfaces/msg/detail/vehicle_command__type_support_c.cpp.o\x1b[0m\n'}
+[8.572271] (roadwork_student) CommandEnded: {'returncode': 0}
+[8.572656] (-) TimerEvent: {}
+[8.628123] (roadwork_student) JobEnded: {'identifier': 'roadwork_student', 'rc': 0}
+[8.672817] (-) TimerEvent: {}
+[8.763502] (roadwork_interfaces) StdoutLine: {'line': b'[ 63%] \x1b[32mBuilding CXX object CMakeFiles/roadwork_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/roadwork_interfaces/msg/detail/dds_fastrtps/radar_detection__type_support.cpp.o\x1b[0m\n'}
+[8.772927] (-) TimerEvent: {}
+[8.832252] (roadwork_interfaces) StdoutLine: {'line': b'[ 64%] \x1b[32mBuilding CXX object CMakeFiles/roadwork_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/roadwork_interfaces/msg/roadwork_beacon__type_support.cpp.o\x1b[0m\n'}
+[8.863359] (roadwork_interfaces) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/roadwork_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/roadwork_interfaces/msg/detail/radar_detections__type_support.cpp.o\x1b[0m\n'}
+[8.873037] (-) TimerEvent: {}
+[8.973358] (-) TimerEvent: {}
+[9.076088] (-) TimerEvent: {}
+[9.084513] (roadwork_interfaces) StdoutLine: {'line': b'[ 67%] \x1b[32mBuilding CXX object CMakeFiles/roadwork_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/roadwork_interfaces/msg/detail/roadwork_beacon__type_support_c.cpp.o\x1b[0m\n'}
+[9.170341] (roadwork_interfaces) StdoutLine: {'line': b'[ 69%] \x1b[32mBuilding CXX object CMakeFiles/roadwork_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/roadwork_interfaces/msg/radar_detection__type_support.cpp.o\x1b[0m\n'}
+[9.176230] (-) TimerEvent: {}
+[9.232304] (roadwork_interfaces) StdoutLine: {'line': b'[ 70%] \x1b[32m\x1b[1mLinking CXX shared library libroadwork_interfaces__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[9.262229] (roadwork_interfaces) StdoutLine: {'line': b'[ 72%] \x1b[32mBuilding CXX object CMakeFiles/roadwork_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/roadwork_interfaces/msg/detail/dds_fastrtps/radar_detections__type_support.cpp.o\x1b[0m\n'}
+[9.276343] (-) TimerEvent: {}
+[9.363474] (roadwork_interfaces) StdoutLine: {'line': b'[ 72%] Built target roadwork_interfaces__rosidl_typesupport_introspection_cpp\n'}
+[9.376466] (-) TimerEvent: {}
+[9.380283] (roadwork_interfaces) StdoutLine: {'line': b'[ 73%] \x1b[32mBuilding CXX object CMakeFiles/roadwork_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/roadwork_interfaces/msg/detail/radar_detection__type_support_c.cpp.o\x1b[0m\n'}
+[9.476599] (-) TimerEvent: {}
+[9.548122] (roadwork_interfaces) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/roadwork_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/roadwork_interfaces/msg/radar_detections__type_support.cpp.o\x1b[0m\n'}
+[9.576726] (-) TimerEvent: {}
+[9.635572] (roadwork_interfaces) StdoutLine: {'line': b'[ 76%] \x1b[32mBuilding CXX object CMakeFiles/roadwork_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/roadwork_interfaces/msg/detail/radar_detections__type_support_c.cpp.o\x1b[0m\n'}
+[9.676854] (-) TimerEvent: {}
+[9.781461] (-) TimerEvent: {}
+[9.790852] (roadwork_interfaces) StdoutLine: {'line': b'[ 78%] \x1b[32m\x1b[1mLinking CXX shared library libroadwork_interfaces__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[9.881587] (-) TimerEvent: {}
+[9.891874] (roadwork_interfaces) StdoutLine: {'line': b'[ 80%] \x1b[32m\x1b[1mLinking CXX shared library libroadwork_interfaces__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[9.898712] (roadwork_interfaces) StdoutLine: {'line': b'[ 80%] Built target roadwork_interfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[9.970316] (roadwork_interfaces) StdoutLine: {'line': b'[ 80%] Built target roadwork_interfaces__rosidl_typesupport_cpp\n'}
+[9.981681] (-) TimerEvent: {}
+[10.081987] (-) TimerEvent: {}
+[10.146777] (roadwork_interfaces) StdoutLine: {'line': b'[ 81%] \x1b[32m\x1b[1mLinking CXX shared library libroadwork_interfaces__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[10.182127] (-) TimerEvent: {}
+[10.215159] (roadwork_interfaces) StdoutLine: {'line': b'[ 81%] Built target roadwork_interfaces__rosidl_typesupport_fastrtps_c\n'}
+[10.244023] (roadwork_interfaces) StdoutLine: {'line': b'[ 81%] Built target roadwork_interfaces\n'}
+[10.264887] (roadwork_interfaces) StdoutLine: {'line': b'[ 83%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[10.282240] (-) TimerEvent: {}
+[10.382509] (-) TimerEvent: {}
+[10.483489] (-) TimerEvent: {}
+[10.583769] (-) TimerEvent: {}
+[10.684068] (-) TimerEvent: {}
+[10.757703] (roadwork_interfaces) StdoutLine: {'line': b'[ 83%] Built target roadwork_interfaces__py\n'}
+[10.779852] (roadwork_interfaces) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/roadwork_interfaces__rosidl_generator_py.dir/rosidl_generator_py/roadwork_interfaces/msg/_radar_detections_s.c.o\x1b[0m\n'}
+[10.780042] (roadwork_interfaces) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/roadwork_interfaces__rosidl_generator_py.dir/rosidl_generator_py/roadwork_interfaces/msg/_vehicle_command_s.c.o\x1b[0m\n'}
+[10.780113] (roadwork_interfaces) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/roadwork_interfaces__rosidl_generator_py.dir/rosidl_generator_py/roadwork_interfaces/msg/_roadwork_beacon_s.c.o\x1b[0m\n'}
+[10.780164] (roadwork_interfaces) StdoutLine: {'line': b'[ 89%] \x1b[32mBuilding C object CMakeFiles/roadwork_interfaces__rosidl_generator_py.dir/rosidl_generator_py/roadwork_interfaces/msg/_radar_detection_s.c.o\x1b[0m\n'}
+[10.784240] (-) TimerEvent: {}
+[10.886413] (-) TimerEvent: {}
+[10.963917] (roadwork_interfaces) StdoutLine: {'line': b'[ 90%] \x1b[32m\x1b[1mLinking C shared library libroadwork_interfaces__rosidl_generator_py.so\x1b[0m\n'}
+[10.987258] (-) TimerEvent: {}
+[11.017458] (roadwork_interfaces) StdoutLine: {'line': b'[ 90%] Built target roadwork_interfaces__rosidl_generator_py\n'}
+[11.048654] (roadwork_interfaces) StdoutLine: {'line': b'[ 95%] \x1b[32mBuilding C object CMakeFiles/roadwork_interfaces_s__rosidl_typesupport_c.dir/rosidl_generator_py/roadwork_interfaces/_roadwork_interfaces_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[11.048857] (roadwork_interfaces) StdoutLine: {'line': b'[ 95%] \x1b[32mBuilding C object CMakeFiles/roadwork_interfaces_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/roadwork_interfaces/_roadwork_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[11.048922] (roadwork_interfaces) StdoutLine: {'line': b'[ 95%] \x1b[32mBuilding C object CMakeFiles/roadwork_interfaces_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/roadwork_interfaces/_roadwork_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[11.088273] (-) TimerEvent: {}
+[11.160853] (roadwork_interfaces) StdoutLine: {'line': b'[ 96%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/roadwork_interfaces/roadwork_interfaces_s__rosidl_typesupport_c.so\x1b[0m\n'}
+[11.165306] (roadwork_interfaces) StdoutLine: {'line': b'[ 98%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/roadwork_interfaces/roadwork_interfaces_s__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[11.168977] (roadwork_interfaces) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/roadwork_interfaces/roadwork_interfaces_s__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[11.188392] (-) TimerEvent: {}
+[11.200348] (roadwork_interfaces) StdoutLine: {'line': b'[100%] Built target roadwork_interfaces_s__rosidl_typesupport_c\n'}
+[11.203706] (roadwork_interfaces) StdoutLine: {'line': b'[100%] Built target roadwork_interfaces_s__rosidl_typesupport_introspection_c\n'}
+[11.205834] (roadwork_interfaces) StdoutLine: {'line': b'[100%] Built target roadwork_interfaces_s__rosidl_typesupport_fastrtps_c\n'}
+[11.226243] (roadwork_interfaces) CommandEnded: {'returncode': 0}
+[11.227449] (roadwork_interfaces) JobProgress: {'identifier': 'roadwork_interfaces', 'progress': 'install'}
+[11.227689] (roadwork_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_interfaces'], 'cwd': '/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_interfaces', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'sergioros', 'SSH_AGENT_PID': '13518', 'XDG_SESSION_TYPE': 'wayland', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/sergioros', 'OLDPWD': '/home/sergioros/iasys_project_ws', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '1490', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'sergioros', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'sergioros', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/bin:/opt/nvim/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/sergioros-Standard-PC-Q35-ICH9-2009:@/tmp/.ICE-unix/1378,unix/sergioros-Standard-PC-Q35-ICH9-2009:/tmp/.ICE-unix/1378', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/4a055413_0b39_4381_b8bd_6dd75e9b3a03', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'RMW_IMPLEMENTATION': 'rmw_fastrtps_cpp', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.OKMVY3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.159', 'SSH_AUTH_SOCK': '/tmp/ssh-guTPilrSXxa9/agent.13517', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_interfaces', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[11.242671] (roadwork_interfaces) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[11.243390] (roadwork_interfaces) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[11.243845] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/ament_index/resource_index/rosidl_interfaces/roadwork_interfaces\n'}
+[11.254259] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/msg/VehicleCommand.json\n'}
+[11.262765] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/msg/RoadworkBeacon.json\n'}
+[11.271616] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/msg/RadarDetection.json\n'}
+[11.280544] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/msg/RadarDetections.json\n'}
+[11.288466] (-) TimerEvent: {}
+[11.289732] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/radar_detection__functions.h\n'}
+[11.300373] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/radar_detection__struct.h\n'}
+[11.315654] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/radar_detection__type_support.h\n'}
+[11.328635] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/radar_detections__functions.h\n'}
+[11.343335] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/radar_detections__struct.h\n'}
+[11.352362] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/radar_detections__type_support.h\n'}
+[11.360760] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/roadwork_beacon__functions.h\n'}
+[11.369085] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/roadwork_beacon__struct.h\n'}
+[11.377265] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/roadwork_beacon__type_support.h\n'}
+[11.385640] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/vehicle_command__functions.h\n'}
+[11.388571] (-) TimerEvent: {}
+[11.395572] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/vehicle_command__struct.h\n'}
+[11.408729] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/vehicle_command__type_support.h\n'}
+[11.423937] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/radar_detection.h\n'}
+[11.438905] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/radar_detections.h\n'}
+[11.450494] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/roadwork_beacon.h\n'}
+[11.459361] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/rosidl_generator_c__visibility_control.h\n'}
+[11.469053] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/vehicle_command.h\n'}
+[11.477281] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/environment/library_path.sh\n'}
+[11.485938] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/environment/library_path.dsv\n'}
+[11.488653] (-) TimerEvent: {}
+[11.496695] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/radar_detection__rosidl_typesupport_fastrtps_c.h\n'}
+[11.510379] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/radar_detections__rosidl_typesupport_fastrtps_c.h\n'}
+[11.524655] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/roadwork_beacon__rosidl_typesupport_fastrtps_c.h\n'}
+[11.541296] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/vehicle_command__rosidl_typesupport_fastrtps_c.h\n'}
+[11.551035] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[11.559955] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/radar_detection__builder.hpp\n'}
+[11.568359] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/radar_detection__struct.hpp\n'}
+[11.576336] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/radar_detection__traits.hpp\n'}
+[11.584396] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/radar_detection__type_support.hpp\n'}
+[11.588762] (-) TimerEvent: {}
+[11.595530] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/radar_detections__builder.hpp\n'}
+[11.605922] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/radar_detections__struct.hpp\n'}
+[11.621645] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/radar_detections__traits.hpp\n'}
+[11.636000] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/radar_detections__type_support.hpp\n'}
+[11.647686] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/roadwork_beacon__builder.hpp\n'}
+[11.656358] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/roadwork_beacon__struct.hpp\n'}
+[11.664487] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/roadwork_beacon__traits.hpp\n'}
+[11.672586] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/roadwork_beacon__type_support.hpp\n'}
+[11.686403] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/vehicle_command__builder.hpp\n'}
+[11.688908] (-) TimerEvent: {}
+[11.703481] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/vehicle_command__struct.hpp\n'}
+[11.724779] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/vehicle_command__traits.hpp\n'}
+[11.749290] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/vehicle_command__type_support.hpp\n'}
+[11.766449] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/radar_detection.hpp\n'}
+[11.779407] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/radar_detections.hpp\n'}
+[11.789060] (-) TimerEvent: {}
+[11.795252] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/roadwork_beacon.hpp\n'}
+[11.804181] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[11.820048] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/vehicle_command.hpp\n'}
+[11.836970] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/radar_detection__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[11.849294] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/radar_detections__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[11.858141] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/roadwork_beacon__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[11.866708] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/vehicle_command__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[11.875442] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[11.884391] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/radar_detection__rosidl_typesupport_introspection_c.h\n'}
+[11.889145] (-) TimerEvent: {}
+[11.895473] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/radar_detections__rosidl_typesupport_introspection_c.h\n'}
+[11.905049] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/roadwork_beacon__rosidl_typesupport_introspection_c.h\n'}
+[11.919818] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/vehicle_command__rosidl_typesupport_introspection_c.h\n'}
+[11.934507] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[11.947141] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/radar_detection__rosidl_typesupport_introspection_cpp.hpp\n'}
+[11.956330] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/radar_detections__rosidl_typesupport_introspection_cpp.hpp\n'}
+[11.965341] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/roadwork_beacon__rosidl_typesupport_introspection_cpp.hpp\n'}
+[11.973857] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/vehicle_command__rosidl_typesupport_introspection_cpp.hpp\n'}
+[11.982643] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/environment/pythonpath.sh\n'}
+[11.989271] (-) TimerEvent: {}
+[11.993102] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/environment/pythonpath.dsv\n'}
+[12.004402] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/python3.12/site-packages/roadwork_interfaces-0.1.0-py3.12.egg-info/PKG-INFO\n'}
+[12.019501] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/python3.12/site-packages/roadwork_interfaces-0.1.0-py3.12.egg-info/SOURCES.txt\n'}
+[12.032846] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/python3.12/site-packages/roadwork_interfaces-0.1.0-py3.12.egg-info/dependency_links.txt\n'}
+[12.045774] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/python3.12/site-packages/roadwork_interfaces-0.1.0-py3.12.egg-info/top_level.txt\n'}
+[12.055660] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/python3.12/site-packages/roadwork_interfaces/__init__.py\n'}
+[12.064331] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/python3.12/site-packages/roadwork_interfaces/_roadwork_interfaces_s.ep.rosidl_typesupport_c.c\n'}
+[12.072889] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/python3.12/site-packages/roadwork_interfaces/_roadwork_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[12.081333] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/python3.12/site-packages/roadwork_interfaces/_roadwork_interfaces_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[12.089368] (-) TimerEvent: {}
+[12.089556] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/python3.12/site-packages/roadwork_interfaces/msg/__init__.py\n'}
+[12.100110] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/python3.12/site-packages/roadwork_interfaces/msg/_radar_detection.py\n'}
+[12.113351] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/python3.12/site-packages/roadwork_interfaces/msg/_radar_detection_s.c\n'}
+[12.125914] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/python3.12/site-packages/roadwork_interfaces/msg/_radar_detections.py\n'}
+[12.141647] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/python3.12/site-packages/roadwork_interfaces/msg/_radar_detections_s.c\n'}
+[12.150907] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/python3.12/site-packages/roadwork_interfaces/msg/_roadwork_beacon.py\n'}
+[12.159280] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/python3.12/site-packages/roadwork_interfaces/msg/_roadwork_beacon_s.c\n'}
+[12.167832] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/python3.12/site-packages/roadwork_interfaces/msg/_vehicle_command.py\n'}
+[12.176136] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/python3.12/site-packages/roadwork_interfaces/msg/_vehicle_command_s.c\n'}
+[12.184808] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/python3.12/site-packages/roadwork_interfaces/roadwork_interfaces_s__rosidl_typesupport_c.so\n'}
+[12.189442] (-) TimerEvent: {}
+[12.194149] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/python3.12/site-packages/roadwork_interfaces/roadwork_interfaces_s__rosidl_typesupport_fastrtps_c.so\n'}
+[12.204126] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/python3.12/site-packages/roadwork_interfaces/roadwork_interfaces_s__rosidl_typesupport_introspection_c.so\n'}
+[12.219364] (roadwork_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/python3.12/site-packages/roadwork_interfaces/roadwork_interfaces_s__rosidl_typesupport_fastrtps_c.so\n'}
+[12.219748] (roadwork_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/python3.12/site-packages/roadwork_interfaces/roadwork_interfaces_s__rosidl_typesupport_introspection_c.so\n'}
+[12.220065] (roadwork_interfaces) StdoutLine: {'line': b'-- Up-to-date symlink: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/python3.12/site-packages/roadwork_interfaces/roadwork_interfaces_s__rosidl_typesupport_c.so\n'}
+[12.220648] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/rust/Cargo.toml\n'}
+[12.236221] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/rust/build.rs\n'}
+[12.247382] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/rust/src/lib.rs\n'}
+[12.256424] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/rust/src/msg.rs\n'}
+[12.264735] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/rust/src/msg/rmw.rs\n'}
+[12.273173] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/msg/VehicleCommand.idl\n'}
+[12.282315] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/msg/RoadworkBeacon.idl\n'}
+[12.289563] (-) TimerEvent: {}
+[12.291768] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/msg/RadarDetection.idl\n'}
+[12.302261] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/msg/RadarDetections.idl\n'}
+[12.318124] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/msg/VehicleCommand.msg\n'}
+[12.331704] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/msg/RoadworkBeacon.msg\n'}
+[12.345421] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/msg/RadarDetection.msg\n'}
+[12.354445] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/msg/RadarDetections.msg\n'}
+[12.362757] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/ament_index/resource_index/package_run_dependencies/roadwork_interfaces\n'}
+[12.370963] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/ament_index/resource_index/parent_prefix_path/roadwork_interfaces\n'}
+[12.379441] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/environment/ament_prefix_path.sh\n'}
+[12.387928] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/environment/ament_prefix_path.dsv\n'}
+[12.389650] (-) TimerEvent: {}
+[12.398636] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/environment/path.sh\n'}
+[12.411838] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/environment/path.dsv\n'}
+[12.424737] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/local_setup.bash\n'}
+[12.440049] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/local_setup.sh\n'}
+[12.450578] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/local_setup.zsh\n'}
+[12.459120] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/local_setup.dsv\n'}
+[12.467551] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/package.dsv\n'}
+[12.475869] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/ament_index/resource_index/packages/roadwork_interfaces\n'}
+[12.484066] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/cmake/rosidl_cmake-extras.cmake\n'}
+[12.489734] (-) TimerEvent: {}
+[12.493026] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[12.503928] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[12.519029] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[12.531483] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[12.543794] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[12.553016] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[12.561329] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/cmake/rosidl_cmake_aggregate_target-extras.cmake\n'}
+[12.569949] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/cmake/roadwork_interfacesConfig.cmake\n'}
+[12.578367] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/cmake/roadwork_interfacesConfig-version.cmake\n'}
+[12.586728] (roadwork_interfaces) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/package.xml\n'}
+[12.589840] (-) TimerEvent: {}
+[12.598457] (roadwork_interfaces) StdoutLine: {'line': b'-- Installing: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/libroadwork_interfaces__rosidl_generator_c.so\n'}
+[12.598948] (roadwork_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/libroadwork_interfaces__rosidl_generator_c.so" to ""\n'}
+[12.599085] (roadwork_interfaces) StdoutLine: {'line': b'-- Installing: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/libroadwork_interfaces__rosidl_typesupport_fastrtps_c.so\n'}
+[12.599528] (roadwork_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/libroadwork_interfaces__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[12.599674] (roadwork_interfaces) StdoutLine: {'line': b'-- Installing: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/libroadwork_interfaces__rosidl_typesupport_fastrtps_cpp.so\n'}
+[12.600042] (roadwork_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/libroadwork_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[12.600214] (roadwork_interfaces) StdoutLine: {'line': b'-- Installing: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/libroadwork_interfaces__rosidl_typesupport_introspection_c.so\n'}
+[12.600536] (roadwork_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/libroadwork_interfaces__rosidl_typesupport_introspection_c.so" to ""\n'}
+[12.600637] (roadwork_interfaces) StdoutLine: {'line': b'-- Installing: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/libroadwork_interfaces__rosidl_typesupport_c.so\n'}
+[12.601061] (roadwork_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/libroadwork_interfaces__rosidl_typesupport_c.so" to ""\n'}
+[12.601205] (roadwork_interfaces) StdoutLine: {'line': b'-- Installing: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/libroadwork_interfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[12.601680] (roadwork_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/libroadwork_interfaces__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[12.601758] (roadwork_interfaces) StdoutLine: {'line': b'-- Installing: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/libroadwork_interfaces__rosidl_typesupport_cpp.so\n'}
+[12.602202] (roadwork_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/libroadwork_interfaces__rosidl_typesupport_cpp.so" to ""\n'}
+[12.665689] (roadwork_interfaces) StdoutLine: {'line': b"Listing '/home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/python3.12/site-packages/roadwork_interfaces'...\n"}
+[12.665875] (roadwork_interfaces) StdoutLine: {'line': b"Compiling '/home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/python3.12/site-packages/roadwork_interfaces/__init__.py'...\n"}
+[12.665936] (roadwork_interfaces) StdoutLine: {'line': b"Listing '/home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/python3.12/site-packages/roadwork_interfaces/msg'...\n"}
+[12.665988] (roadwork_interfaces) StdoutLine: {'line': b"Compiling '/home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/python3.12/site-packages/roadwork_interfaces/msg/__init__.py'...\n"}
+[12.666051] (roadwork_interfaces) StdoutLine: {'line': b"Compiling '/home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/python3.12/site-packages/roadwork_interfaces/msg/_radar_detection.py'...\n"}
+[12.666113] (roadwork_interfaces) StdoutLine: {'line': b"Compiling '/home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/python3.12/site-packages/roadwork_interfaces/msg/_radar_detections.py'...\n"}
+[12.666164] (roadwork_interfaces) StdoutLine: {'line': b"Compiling '/home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/python3.12/site-packages/roadwork_interfaces/msg/_roadwork_beacon.py'...\n"}
+[12.666236] (roadwork_interfaces) StdoutLine: {'line': b"Compiling '/home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/python3.12/site-packages/roadwork_interfaces/msg/_vehicle_command.py'...\n"}
+[12.670738] (roadwork_interfaces) StdoutLine: {'line': b'-- Installing: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/libroadwork_interfaces__rosidl_generator_py.so\n'}
+[12.671372] (roadwork_interfaces) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/libroadwork_interfaces__rosidl_generator_py.so" to ""\n'}
+[12.671498] (roadwork_interfaces) StdoutLine: {'line': b'-- Installing: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/cmake/export_roadwork_interfaces__rosidl_generator_cExport.cmake\n'}
+[12.671687] (roadwork_interfaces) StdoutLine: {'line': b'-- Installing: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/cmake/export_roadwork_interfaces__rosidl_generator_cExport-noconfig.cmake\n'}
+[12.671910] (roadwork_interfaces) StdoutLine: {'line': b'-- Installing: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/cmake/export_roadwork_interfaces__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[12.672185] (roadwork_interfaces) StdoutLine: {'line': b'-- Installing: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/cmake/export_roadwork_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[12.672387] (roadwork_interfaces) StdoutLine: {'line': b'-- Installing: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/cmake/export_roadwork_interfaces__rosidl_generator_cppExport.cmake\n'}
+[12.672602] (roadwork_interfaces) StdoutLine: {'line': b'-- Installing: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/cmake/export_roadwork_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[12.672801] (roadwork_interfaces) StdoutLine: {'line': b'-- Installing: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/cmake/export_roadwork_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[12.673078] (roadwork_interfaces) StdoutLine: {'line': b'-- Installing: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/cmake/roadwork_interfaces__rosidl_typesupport_introspection_cExport.cmake\n'}
+[12.673289] (roadwork_interfaces) StdoutLine: {'line': b'-- Installing: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/cmake/roadwork_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[12.673519] (roadwork_interfaces) StdoutLine: {'line': b'-- Installing: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/cmake/roadwork_interfaces__rosidl_typesupport_cExport.cmake\n'}
+[12.673712] (roadwork_interfaces) StdoutLine: {'line': b'-- Installing: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/cmake/roadwork_interfaces__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[12.673985] (roadwork_interfaces) StdoutLine: {'line': b'-- Installing: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/cmake/roadwork_interfaces__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[12.674205] (roadwork_interfaces) StdoutLine: {'line': b'-- Installing: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/cmake/roadwork_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[12.674424] (roadwork_interfaces) StdoutLine: {'line': b'-- Installing: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/cmake/roadwork_interfaces__rosidl_typesupport_cppExport.cmake\n'}
+[12.674673] (roadwork_interfaces) StdoutLine: {'line': b'-- Installing: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/cmake/roadwork_interfaces__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[12.674881] (roadwork_interfaces) StdoutLine: {'line': b'-- Installing: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/cmake/export_roadwork_interfaces__rosidl_generator_pyExport.cmake\n'}
+[12.675060] (roadwork_interfaces) StdoutLine: {'line': b'-- Installing: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/cmake/export_roadwork_interfaces__rosidl_generator_pyExport-noconfig.cmake\n'}
+[12.678204] (roadwork_interfaces) CommandEnded: {'returncode': 0}
+[12.689973] (-) TimerEvent: {}
+[12.694956] (roadwork_interfaces) JobEnded: {'identifier': 'roadwork_interfaces', 'rc': 0}
+[12.696067] (roadwork_sim) JobStarted: {'identifier': 'roadwork_sim'}
+[12.703956] (roadwork_sim) JobProgress: {'identifier': 'roadwork_sim', 'progress': 'cmake'}
+[12.704799] (roadwork_sim) Command: {'cmd': ['/usr/bin/cmake', '/home/sergioros/iasys_project_ws/MESCC-IASYS/src/roadwork_sim', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_sim'], 'cwd': '/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_sim', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'sergioros', 'SSH_AGENT_PID': '13518', 'XDG_SESSION_TYPE': 'wayland', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/sergioros', 'OLDPWD': '/home/sergioros/iasys_project_ws', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '1490', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'sergioros', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'sergioros', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/bin:/opt/nvim/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/sergioros-Standard-PC-Q35-ICH9-2009:@/tmp/.ICE-unix/1378,unix/sergioros-Standard-PC-Q35-ICH9-2009:/tmp/.ICE-unix/1378', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/4a055413_0b39_4381_b8bd_6dd75e9b3a03', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'RMW_IMPLEMENTATION': 'rmw_fastrtps_cpp', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.OKMVY3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.159', 'SSH_AUTH_SOCK': '/tmp/ssh-guTPilrSXxa9/agent.13517', 'AMENT_PREFIX_PATH': '/home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces:/home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_core:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_sim', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/python3.12/site-packages:/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces:/home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_core:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[12.776381] (roadwork_sim) StdoutLine: {'line': b'-- The C compiler identification is GNU 13.3.0\n'}
+[12.790157] (-) TimerEvent: {}
+[12.845888] (roadwork_sim) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 13.3.0\n'}
+[12.861922] (roadwork_sim) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[12.890257] (-) TimerEvent: {}
+[12.964505] (roadwork_sim) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[12.971985] (roadwork_sim) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[12.972386] (roadwork_sim) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[12.972846] (roadwork_sim) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[12.981998] (roadwork_sim) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[12.990327] (-) TimerEvent: {}
+[13.090575] (-) TimerEvent: {}
+[13.096237] (roadwork_sim) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[13.101850] (roadwork_sim) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[13.101999] (roadwork_sim) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[13.102587] (roadwork_sim) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[13.106227] (roadwork_sim) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[13.190701] (-) TimerEvent: {}
+[13.253643] (roadwork_sim) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[13.290795] (-) TimerEvent: {}
+[13.331448] (roadwork_sim) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[13.367373] (roadwork_sim) StdoutLine: {'line': b'-- Found rclcpp: 28.1.22 (/opt/ros/jazzy/share/rclcpp/cmake)\n'}
+[13.390897] (-) TimerEvent: {}
+[13.405134] (roadwork_sim) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)\n'}
+[13.419713] (roadwork_sim) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[13.436431] (roadwork_sim) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[13.454302] (roadwork_sim) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[13.491008] (-) TimerEvent: {}
+[13.525743] (roadwork_sim) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 7.3.4 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)\n'}
+[13.528662] (roadwork_sim) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 8.4.4 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)\n'}
+[13.591141] (-) TimerEvent: {}
+[13.614456] (roadwork_sim) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  \n'}
+[13.641915] (roadwork_sim) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") \n'}
+[13.664531] (roadwork_sim) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[13.691239] (-) TimerEvent: {}
+[13.754295] (roadwork_sim) StdoutLine: {'line': b'-- Found nav_msgs: 5.3.8 (/opt/ros/jazzy/share/nav_msgs/cmake)\n'}
+[13.791347] (-) TimerEvent: {}
+[13.826818] (roadwork_sim) StdoutLine: {'line': b'-- Found sensor_msgs: 5.3.8 (/opt/ros/jazzy/share/sensor_msgs/cmake)\n'}
+[13.854997] (roadwork_sim) StdoutLine: {'line': b'-- Found roadwork_interfaces: 0.1.0 (/home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/cmake)\n'}
+[13.868410] (roadwork_sim) StdoutLine: {'line': b'-- Found roadwork_core: 0.2.0 (/home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_core/share/roadwork_core/cmake)\n'}
+[13.874242] (roadwork_sim) StdoutLine: {'line': b'-- Found tf2_msgs: 0.36.23 (/opt/ros/jazzy/share/tf2_msgs/cmake)\n'}
+[13.891645] (-) TimerEvent: {}
+[13.957227] (roadwork_sim) StdoutLine: {'line': b'-- Found visualization_msgs: 5.3.8 (/opt/ros/jazzy/share/visualization_msgs/cmake)\n'}
+[13.992265] (-) TimerEvent: {}
+[14.081751] (roadwork_sim) StdoutLine: {'line': b'-- Configuring done (1.4s)\n'}
+[14.092333] (-) TimerEvent: {}
+[14.098475] (roadwork_sim) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[14.102141] (roadwork_sim) StdoutLine: {'line': b'-- Build files have been written to: /home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_sim\n'}
+[14.122838] (roadwork_sim) CommandEnded: {'returncode': 0}
+[14.123518] (roadwork_sim) JobProgress: {'identifier': 'roadwork_sim', 'progress': 'build'}
+[14.123554] (roadwork_sim) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_sim', '--', '-j4', '-l4'], 'cwd': '/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_sim', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'sergioros', 'SSH_AGENT_PID': '13518', 'XDG_SESSION_TYPE': 'wayland', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/sergioros', 'OLDPWD': '/home/sergioros/iasys_project_ws', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '1490', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'sergioros', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'sergioros', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/bin:/opt/nvim/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/sergioros-Standard-PC-Q35-ICH9-2009:@/tmp/.ICE-unix/1378,unix/sergioros-Standard-PC-Q35-ICH9-2009:/tmp/.ICE-unix/1378', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/4a055413_0b39_4381_b8bd_6dd75e9b3a03', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'RMW_IMPLEMENTATION': 'rmw_fastrtps_cpp', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.OKMVY3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.159', 'SSH_AUTH_SOCK': '/tmp/ssh-guTPilrSXxa9/agent.13517', 'AMENT_PREFIX_PATH': '/home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces:/home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_core:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_sim', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/python3.12/site-packages:/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces:/home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_core:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[14.185048] (roadwork_sim) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/simulator_node.dir/src/simulator_node.cpp.o\x1b[0m\n'}
+[14.192420] (-) TimerEvent: {}
+[14.292686] (-) TimerEvent: {}
+[14.393462] (-) TimerEvent: {}
+[14.495373] (-) TimerEvent: {}
+[14.595707] (-) TimerEvent: {}
+[14.696060] (-) TimerEvent: {}
+[14.796428] (-) TimerEvent: {}
+[14.896796] (-) TimerEvent: {}
+[14.997152] (-) TimerEvent: {}
+[15.097546] (-) TimerEvent: {}
+[15.197918] (-) TimerEvent: {}
+[15.298636] (-) TimerEvent: {}
+[15.399010] (-) TimerEvent: {}
+[15.499386] (-) TimerEvent: {}
+[15.599752] (-) TimerEvent: {}
+[15.700138] (-) TimerEvent: {}
+[15.800517] (-) TimerEvent: {}
+[15.900990] (-) TimerEvent: {}
+[16.001365] (-) TimerEvent: {}
+[16.101721] (-) TimerEvent: {}
+[16.202077] (-) TimerEvent: {}
+[16.302446] (-) TimerEvent: {}
+[16.402827] (-) TimerEvent: {}
+[16.503207] (-) TimerEvent: {}
+[16.603581] (-) TimerEvent: {}
+[16.703981] (-) TimerEvent: {}
+[16.804333] (-) TimerEvent: {}
+[16.904712] (-) TimerEvent: {}
+[17.005055] (-) TimerEvent: {}
+[17.105441] (-) TimerEvent: {}
+[17.205910] (-) TimerEvent: {}
+[17.306271] (-) TimerEvent: {}
+[17.406686] (-) TimerEvent: {}
+[17.507055] (-) TimerEvent: {}
+[17.607414] (-) TimerEvent: {}
+[17.707768] (-) TimerEvent: {}
+[17.808114] (-) TimerEvent: {}
+[17.908526] (-) TimerEvent: {}
+[18.008891] (-) TimerEvent: {}
+[18.109273] (-) TimerEvent: {}
+[18.209735] (-) TimerEvent: {}
+[18.310092] (-) TimerEvent: {}
+[18.410438] (-) TimerEvent: {}
+[18.510798] (-) TimerEvent: {}
+[18.611151] (-) TimerEvent: {}
+[18.711535] (-) TimerEvent: {}
+[18.811885] (-) TimerEvent: {}
+[18.912273] (-) TimerEvent: {}
+[19.012632] (-) TimerEvent: {}
+[19.112983] (-) TimerEvent: {}
+[19.213375] (-) TimerEvent: {}
+[19.313737] (-) TimerEvent: {}
+[19.414106] (-) TimerEvent: {}
+[19.514880] (-) TimerEvent: {}
+[19.615253] (-) TimerEvent: {}
+[19.715609] (-) TimerEvent: {}
+[19.815962] (-) TimerEvent: {}
+[19.916335] (-) TimerEvent: {}
+[20.016693] (-) TimerEvent: {}
+[20.117086] (-) TimerEvent: {}
+[20.217562] (-) TimerEvent: {}
+[20.317917] (-) TimerEvent: {}
+[20.418283] (-) TimerEvent: {}
+[20.518630] (-) TimerEvent: {}
+[20.618989] (-) TimerEvent: {}
+[20.719340] (-) TimerEvent: {}
+[20.819686] (-) TimerEvent: {}
+[20.920032] (-) TimerEvent: {}
+[21.020400] (-) TimerEvent: {}
+[21.120764] (-) TimerEvent: {}
+[21.221178] (-) TimerEvent: {}
+[21.321984] (-) TimerEvent: {}
+[21.422339] (-) TimerEvent: {}
+[21.522713] (-) TimerEvent: {}
+[21.623186] (-) TimerEvent: {}
+[21.723561] (-) TimerEvent: {}
+[21.825286] (-) TimerEvent: {}
+[21.925645] (-) TimerEvent: {}
+[22.026018] (-) TimerEvent: {}
+[22.126405] (-) TimerEvent: {}
+[22.226769] (-) TimerEvent: {}
+[22.327153] (-) TimerEvent: {}
+[22.427588] (-) TimerEvent: {}
+[22.528003] (-) TimerEvent: {}
+[22.628363] (-) TimerEvent: {}
+[22.728733] (-) TimerEvent: {}
+[22.829086] (-) TimerEvent: {}
+[22.929454] (-) TimerEvent: {}
+[23.029816] (-) TimerEvent: {}
+[23.130237] (-) TimerEvent: {}
+[23.230568] (-) TimerEvent: {}
+[23.330919] (-) TimerEvent: {}
+[23.431276] (-) TimerEvent: {}
+[23.531674] (-) TimerEvent: {}
+[23.631996] (-) TimerEvent: {}
+[23.732332] (-) TimerEvent: {}
+[23.832671] (-) TimerEvent: {}
+[23.933004] (-) TimerEvent: {}
+[24.033339] (-) TimerEvent: {}
+[24.133689] (-) TimerEvent: {}
+[24.234021] (-) TimerEvent: {}
+[24.334372] (-) TimerEvent: {}
+[24.434721] (-) TimerEvent: {}
+[24.535057] (-) TimerEvent: {}
+[24.635419] (-) TimerEvent: {}
+[24.735755] (-) TimerEvent: {}
+[24.836086] (-) TimerEvent: {}
+[24.936454] (-) TimerEvent: {}
+[25.036791] (-) TimerEvent: {}
+[25.137129] (-) TimerEvent: {}
+[25.237465] (-) TimerEvent: {}
+[25.337798] (-) TimerEvent: {}
+[25.438134] (-) TimerEvent: {}
+[25.538495] (-) TimerEvent: {}
+[25.638836] (-) TimerEvent: {}
+[25.739176] (-) TimerEvent: {}
+[25.839547] (-) TimerEvent: {}
+[25.939881] (-) TimerEvent: {}
+[26.040242] (-) TimerEvent: {}
+[26.140574] (-) TimerEvent: {}
+[26.240909] (-) TimerEvent: {}
+[26.341635] (-) TimerEvent: {}
+[26.441980] (-) TimerEvent: {}
+[26.542324] (-) TimerEvent: {}
+[26.642645] (-) TimerEvent: {}
+[26.742979] (-) TimerEvent: {}
+[26.843408] (-) TimerEvent: {}
+[26.943740] (-) TimerEvent: {}
+[27.044079] (-) TimerEvent: {}
+[27.144478] (-) TimerEvent: {}
+[27.244816] (-) TimerEvent: {}
+[27.345147] (-) TimerEvent: {}
+[27.445494] (-) TimerEvent: {}
+[27.545828] (-) TimerEvent: {}
+[27.646178] (-) TimerEvent: {}
+[27.746526] (-) TimerEvent: {}
+[27.846863] (-) TimerEvent: {}
+[27.947301] (-) TimerEvent: {}
+[28.047619] (-) TimerEvent: {}
+[28.148699] (-) TimerEvent: {}
+[28.249035] (-) TimerEvent: {}
+[28.349410] (-) TimerEvent: {}
+[28.449798] (-) TimerEvent: {}
+[28.550183] (-) TimerEvent: {}
+[28.650596] (-) TimerEvent: {}
+[28.751034] (-) TimerEvent: {}
+[28.851490] (-) TimerEvent: {}
+[28.951960] (-) TimerEvent: {}
+[29.052346] (-) TimerEvent: {}
+[29.117256] (roadwork_sim) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable simulator_node\x1b[0m\n'}
+[29.153271] (-) TimerEvent: {}
+[29.253602] (-) TimerEvent: {}
+[29.353943] (-) TimerEvent: {}
+[29.454268] (-) TimerEvent: {}
+[29.555412] (-) TimerEvent: {}
+[29.655740] (-) TimerEvent: {}
+[29.756043] (-) TimerEvent: {}
+[29.857838] (roadwork_sim) StdoutLine: {'line': b'[100%] Built target simulator_node\n'}
+[29.858051] (-) TimerEvent: {}
+[29.871362] (roadwork_sim) CommandEnded: {'returncode': 0}
+[29.872030] (roadwork_sim) JobProgress: {'identifier': 'roadwork_sim', 'progress': 'install'}
+[29.872578] (roadwork_sim) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_sim'], 'cwd': '/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_sim', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'sergioros', 'SSH_AGENT_PID': '13518', 'XDG_SESSION_TYPE': 'wayland', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/sergioros', 'OLDPWD': '/home/sergioros/iasys_project_ws', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '1490', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'sergioros', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'sergioros', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/bin:/opt/nvim/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/sergioros-Standard-PC-Q35-ICH9-2009:@/tmp/.ICE-unix/1378,unix/sergioros-Standard-PC-Q35-ICH9-2009:/tmp/.ICE-unix/1378', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/4a055413_0b39_4381_b8bd_6dd75e9b3a03', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'RMW_IMPLEMENTATION': 'rmw_fastrtps_cpp', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.OKMVY3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.159', 'SSH_AUTH_SOCK': '/tmp/ssh-guTPilrSXxa9/agent.13517', 'AMENT_PREFIX_PATH': '/home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces:/home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_core:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_sim', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/python3.12/site-packages:/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces:/home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_core:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[29.887315] (roadwork_sim) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[29.887783] (roadwork_sim) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[29.888323] (roadwork_sim) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_sim/lib/roadwork_sim/simulator_node\n'}
+[29.907264] (roadwork_sim) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_sim/share/roadwork_sim/launch/challenge.launch.py\n'}
+[29.917294] (roadwork_sim) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_sim/share/roadwork_sim/rviz/challenge.rviz\n'}
+[29.926758] (roadwork_sim) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_sim/share/ament_index/resource_index/package_run_dependencies/roadwork_sim\n'}
+[29.935125] (roadwork_sim) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_sim/share/ament_index/resource_index/parent_prefix_path/roadwork_sim\n'}
+[29.943956] (roadwork_sim) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_sim/share/roadwork_sim/environment/ament_prefix_path.sh\n'}
+[29.952662] (roadwork_sim) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_sim/share/roadwork_sim/environment/ament_prefix_path.dsv\n'}
+[29.958126] (-) TimerEvent: {}
+[29.961895] (roadwork_sim) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_sim/share/roadwork_sim/environment/path.sh\n'}
+[29.972584] (roadwork_sim) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_sim/share/roadwork_sim/environment/path.dsv\n'}
+[29.990275] (roadwork_sim) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_sim/share/roadwork_sim/local_setup.bash\n'}
+[30.008775] (roadwork_sim) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_sim/share/roadwork_sim/local_setup.sh\n'}
+[30.018833] (roadwork_sim) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_sim/share/roadwork_sim/local_setup.zsh\n'}
+[30.028238] (roadwork_sim) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_sim/share/roadwork_sim/local_setup.dsv\n'}
+[30.036966] (roadwork_sim) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_sim/share/roadwork_sim/package.dsv\n'}
+[30.045896] (roadwork_sim) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_sim/share/ament_index/resource_index/packages/roadwork_sim\n'}
+[30.055001] (roadwork_sim) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_sim/share/roadwork_sim/cmake/roadwork_simConfig.cmake\n'}
+[30.058238] (-) TimerEvent: {}
+[30.064548] (roadwork_sim) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_sim/share/roadwork_sim/cmake/roadwork_simConfig-version.cmake\n'}
+[30.074434] (roadwork_sim) StdoutLine: {'line': b'-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_sim/share/roadwork_sim/package.xml\n'}
+[30.101570] (roadwork_sim) CommandEnded: {'returncode': 0}
+[30.114156] (roadwork_sim) JobEnded: {'identifier': 'roadwork_sim', 'rc': 0}
+[30.114849] (-) EventReactorShutdown: {}

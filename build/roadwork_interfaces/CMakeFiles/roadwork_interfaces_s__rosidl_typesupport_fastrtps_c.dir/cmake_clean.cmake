@@ -1,0 +1,11 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/roadwork_interfaces_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/roadwork_interfaces/_roadwork_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o"
+  "CMakeFiles/roadwork_interfaces_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/roadwork_interfaces/_roadwork_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o.d"
+  "rosidl_generator_py/roadwork_interfaces/roadwork_interfaces_s__rosidl_typesupport_fastrtps_c.pdb"
+  "rosidl_generator_py/roadwork_interfaces/roadwork_interfaces_s__rosidl_typesupport_fastrtps_c.so"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang C)
+  include(CMakeFiles/roadwork_interfaces_s__rosidl_typesupport_fastrtps_c.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

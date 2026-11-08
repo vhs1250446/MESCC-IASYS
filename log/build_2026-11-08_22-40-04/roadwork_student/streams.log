@@ -1,0 +1,63 @@
+[0.024s] Invoking command in '/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_student': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/sergioros/iasys_project_ws/MESCC-IASYS/src/roadwork_student -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_student
+[0.182s] -- The C compiler identification is GNU 13.3.0
+[0.321s] -- The CXX compiler identification is GNU 13.3.0
+[0.355s] -- Detecting C compiler ABI info
+[0.477s] -- Detecting C compiler ABI info - done
+[0.487s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.487s] -- Detecting C compile features
+[0.489s] -- Detecting C compile features - done
+[0.501s] -- Detecting CXX compiler ABI info
+[0.652s] -- Detecting CXX compiler ABI info - done
+[0.661s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.662s] -- Detecting CXX compile features
+[0.662s] -- Detecting CXX compile features - done
+[0.667s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.839s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.955s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.007s] -- Found rclcpp: 28.1.22 (/opt/ros/jazzy/share/rclcpp/cmake)
+[1.069s] -- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[1.086s] -- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[1.112s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.139s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.246s] -- Found rmw_implementation_cmake: 7.3.4 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[1.249s] -- Found rmw_fastrtps_cpp: 8.4.4 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[1.381s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[1.408s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[1.454s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.684s] -- Configuring done (1.6s)
+[1.719s] -- Generating done (0.0s)
+[1.731s] -- Build files have been written to: /home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_student
+[1.747s] Invoked command in '/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_student' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/sergioros/iasys_project_ws/MESCC-IASYS/src/roadwork_student -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_student
+[1.748s] Invoking command in '/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_student': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_student -- -j4 -l4
+[1.809s] [ 16%] [32mBuilding CXX object CMakeFiles/act_node.dir/src/act_node.cpp.o[0m
+[1.809s] [ 33%] [32mBuilding CXX object CMakeFiles/sense_node.dir/src/sense_node.cpp.o[0m
+[1.816s] [ 50%] [32mBuilding CXX object CMakeFiles/plan_node.dir/src/plan_node.cpp.o[0m
+[7.283s] [ 66%] [32m[1mLinking CXX executable plan_node[0m
+[7.388s] [ 83%] [32m[1mLinking CXX executable act_node[0m
+[7.745s] [ 83%] Built target act_node
+[7.766s] [ 83%] Built target plan_node
+[7.801s] [100%] [32m[1mLinking CXX executable sense_node[0m
+[8.046s] [100%] Built target sense_node
+[8.080s] Invoked command in '/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_student' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_student -- -j4 -l4
+[8.084s] Invoking command in '/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_student': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_student
+[8.113s] -- Install configuration: ""
+[8.116s] -- Execute custom install script
+[8.118s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_student/lib/roadwork_student/sense_node
+[8.157s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_student/lib/roadwork_student/plan_node
+[8.193s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_student/lib/roadwork_student/act_node
+[8.224s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_student/share/ament_index/resource_index/package_run_dependencies/roadwork_student
+[8.246s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_student/share/ament_index/resource_index/parent_prefix_path/roadwork_student
+[8.265s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_student/share/roadwork_student/environment/ament_prefix_path.sh
+[8.297s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_student/share/roadwork_student/environment/ament_prefix_path.dsv
+[8.327s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_student/share/roadwork_student/environment/path.sh
+[8.346s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_student/share/roadwork_student/environment/path.dsv
+[8.369s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_student/share/roadwork_student/local_setup.bash
+[8.385s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_student/share/roadwork_student/local_setup.sh
+[8.402s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_student/share/roadwork_student/local_setup.zsh
+[8.429s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_student/share/roadwork_student/local_setup.dsv
+[8.446s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_student/share/roadwork_student/package.dsv
+[8.458s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_student/share/ament_index/resource_index/packages/roadwork_student
+[8.473s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_student/share/roadwork_student/cmake/roadwork_studentConfig.cmake
+[8.504s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_student/share/roadwork_student/cmake/roadwork_studentConfig-version.cmake
+[8.531s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_student/share/roadwork_student/package.xml
+[8.560s] Invoked command in '/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_student' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_student

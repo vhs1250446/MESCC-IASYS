@@ -1,0 +1,4 @@
+source;share/roadwork_solution_msgs/local_setup.bash
+source;share/roadwork_solution_msgs/local_setup.dsv
+source;share/roadwork_solution_msgs/local_setup.sh
+source;share/roadwork_solution_msgs/local_setup.zsh

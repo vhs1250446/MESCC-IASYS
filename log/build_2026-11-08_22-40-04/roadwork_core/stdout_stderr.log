@@ -1,0 +1,38 @@
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Configuring done (1.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_core
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_core/include/roadwork_core/simulator.hpp
+-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_core/include/roadwork_core/types.hpp
+-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_core/share/ament_index/resource_index/package_run_dependencies/roadwork_core
+-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_core/share/ament_index/resource_index/parent_prefix_path/roadwork_core
+-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_core/share/roadwork_core/environment/ament_prefix_path.sh
+-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_core/share/roadwork_core/environment/ament_prefix_path.dsv
+-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_core/share/roadwork_core/environment/path.sh
+-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_core/share/roadwork_core/environment/path.dsv
+-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_core/share/roadwork_core/local_setup.bash
+-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_core/share/roadwork_core/local_setup.sh
+-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_core/share/roadwork_core/local_setup.zsh
+-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_core/share/roadwork_core/local_setup.dsv
+-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_core/share/roadwork_core/package.dsv
+-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_core/share/ament_index/resource_index/packages/roadwork_core
+-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_core/share/roadwork_core/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_core/share/roadwork_core/cmake/roadwork_coreConfig.cmake
+-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_core/share/roadwork_core/cmake/roadwork_coreConfig-version.cmake
+-- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_core/share/roadwork_core/package.xml

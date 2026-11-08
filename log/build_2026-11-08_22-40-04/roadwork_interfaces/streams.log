@@ -1,0 +1,297 @@
+[0.023s] Invoking command in '/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/sergioros/iasys_project_ws/MESCC-IASYS/src/roadwork_interfaces -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces
+[0.186s] -- The C compiler identification is GNU 13.3.0
+[0.334s] -- The CXX compiler identification is GNU 13.3.0
+[0.358s] -- Detecting C compiler ABI info
+[0.490s] -- Detecting C compiler ABI info - done
+[0.501s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.501s] -- Detecting C compile features
+[0.501s] -- Detecting C compile features - done
+[0.510s] -- Detecting CXX compiler ABI info
+[0.645s] -- Detecting CXX compiler ABI info - done
+[0.656s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.656s] -- Detecting CXX compile features
+[0.656s] -- Detecting CXX compile features - done
+[0.668s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.854s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.961s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.012s] -- Found std_msgs: 5.3.8 (/opt/ros/jazzy/share/std_msgs/cmake)
+[1.074s] -- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[1.091s] -- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[1.119s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.144s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.186s] -- Found rosidl_default_generators: 1.6.1 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)
+[1.218s] -- Found rosidl_adapter: 4.6.9 (/opt/ros/jazzy/share/rosidl_adapter/cmake)
+[1.937s] -- Found ament_cmake_ros: 0.12.2 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)
+[2.944s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[3.302s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[3.317s] -- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)
+[3.494s] -- Found PythonExtra: /usr/bin/python3  
+[4.124s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed 
+[4.244s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[4.264s] -- Configuring done (4.2s)
+[4.320s] -- Generating done (0.0s)
+[4.333s] -- Build files have been written to: /home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_interfaces
+[4.363s] Invoked command in '/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/sergioros/iasys_project_ws/MESCC-IASYS/src/roadwork_interfaces -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces
+[4.365s] Invoking command in '/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_interfaces -- -j4 -l4
+[4.477s] [  1%] [34m[1mGenerating type hashes for ROS interfaces[0m
+[4.482s] [  3%] [34m[1mGenerating Rust code for ROS interfaces[0m
+[4.512s] [  3%] Built target ament_cmake_python_symlink_roadwork_interfaces
+[4.890s] running egg_info
+[4.893s] creating roadwork_interfaces.egg-info
+[4.922s] [  3%] Built target roadwork_interfaces__rosidl_generator_type_description
+[4.934s] writing roadwork_interfaces.egg-info/PKG-INFO
+[4.934s] writing dependency_links to roadwork_interfaces.egg-info/dependency_links.txt
+[4.939s] writing top-level names to roadwork_interfaces.egg-info/top_level.txt
+[4.939s] writing manifest file 'roadwork_interfaces.egg-info/SOURCES.txt'
+[4.942s] [  4%] [34m[1mGenerating C code for ROS interfaces[0m
+[4.993s] [  6%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[5.065s] reading manifest file 'roadwork_interfaces.egg-info/SOURCES.txt'
+[5.070s] writing manifest file 'roadwork_interfaces.egg-info/SOURCES.txt'
+[5.241s] [  6%] Built target ament_cmake_python_build_roadwork_interfaces_egg
+[5.271s] [  6%] Built target roadwork_interfaces__rs
+[5.817s] [  6%] Built target roadwork_interfaces__cpp
+[6.068s] [  7%] [32mBuilding C object CMakeFiles/roadwork_interfaces__rosidl_generator_c.dir/rosidl_generator_c/roadwork_interfaces/msg/detail/vehicle_command__description.c.o[0m
+[6.092s] [  9%] [32mBuilding C object CMakeFiles/roadwork_interfaces__rosidl_generator_c.dir/rosidl_generator_c/roadwork_interfaces/msg/detail/roadwork_beacon__description.c.o[0m
+[6.106s] [ 10%] [32mBuilding C object CMakeFiles/roadwork_interfaces__rosidl_generator_c.dir/rosidl_generator_c/roadwork_interfaces/msg/detail/vehicle_command__functions.c.o[0m
+[6.111s] [ 12%] [32mBuilding C object CMakeFiles/roadwork_interfaces__rosidl_generator_c.dir/rosidl_generator_c/roadwork_interfaces/msg/detail/vehicle_command__type_support.c.o[0m
+[6.188s] [ 13%] [32mBuilding C object CMakeFiles/roadwork_interfaces__rosidl_generator_c.dir/rosidl_generator_c/roadwork_interfaces/msg/detail/roadwork_beacon__functions.c.o[0m
+[6.211s] [ 15%] [32mBuilding C object CMakeFiles/roadwork_interfaces__rosidl_generator_c.dir/rosidl_generator_c/roadwork_interfaces/msg/detail/radar_detection__description.c.o[0m
+[6.211s] [ 16%] [32mBuilding C object CMakeFiles/roadwork_interfaces__rosidl_generator_c.dir/rosidl_generator_c/roadwork_interfaces/msg/detail/roadwork_beacon__type_support.c.o[0m
+[6.271s] [ 18%] [32mBuilding C object CMakeFiles/roadwork_interfaces__rosidl_generator_c.dir/rosidl_generator_c/roadwork_interfaces/msg/detail/radar_detection__functions.c.o[0m
+[6.305s] [ 20%] [32mBuilding C object CMakeFiles/roadwork_interfaces__rosidl_generator_c.dir/rosidl_generator_c/roadwork_interfaces/msg/detail/radar_detection__type_support.c.o[0m
+[6.315s] [ 21%] [32mBuilding C object CMakeFiles/roadwork_interfaces__rosidl_generator_c.dir/rosidl_generator_c/roadwork_interfaces/msg/detail/radar_detections__description.c.o[0m
+[6.335s] [ 23%] [32mBuilding C object CMakeFiles/roadwork_interfaces__rosidl_generator_c.dir/rosidl_generator_c/roadwork_interfaces/msg/detail/radar_detections__functions.c.o[0m
+[6.419s] [ 24%] [32mBuilding C object CMakeFiles/roadwork_interfaces__rosidl_generator_c.dir/rosidl_generator_c/roadwork_interfaces/msg/detail/radar_detections__type_support.c.o[0m
+[6.461s] [ 26%] [32m[1mLinking C shared library libroadwork_interfaces__rosidl_generator_c.so[0m
+[6.527s] [ 26%] Built target roadwork_interfaces__rosidl_generator_c
+[6.547s] [ 27%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[6.555s] [ 29%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[6.555s] [ 30%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[6.557s] [ 32%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[7.360s] [ 33%] [32mBuilding CXX object CMakeFiles/roadwork_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/roadwork_interfaces/msg/vehicle_command__type_support.cpp.o[0m
+[7.430s] [ 35%] [32mBuilding CXX object CMakeFiles/roadwork_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/roadwork_interfaces/msg/detail/vehicle_command__type_support.cpp.o[0m
+[7.440s] [ 36%] [32mBuilding C object CMakeFiles/roadwork_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/roadwork_interfaces/msg/detail/vehicle_command__type_support.c.o[0m
+[7.452s] [ 38%] [32mBuilding CXX object CMakeFiles/roadwork_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/roadwork_interfaces/msg/roadwork_beacon__type_support.cpp.o[0m
+[7.462s] [ 40%] [32mBuilding CXX object CMakeFiles/roadwork_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/roadwork_interfaces/msg/detail/dds_fastrtps/vehicle_command__type_support.cpp.o[0m
+[7.591s] [ 41%] [32mBuilding C object CMakeFiles/roadwork_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/roadwork_interfaces/msg/detail/roadwork_beacon__type_support.c.o[0m
+[7.607s] [ 43%] [32mBuilding CXX object CMakeFiles/roadwork_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/roadwork_interfaces/msg/radar_detection__type_support.cpp.o[0m
+[7.675s] [ 44%] [32mBuilding C object CMakeFiles/roadwork_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/roadwork_interfaces/msg/detail/radar_detection__type_support.c.o[0m
+[7.734s] [ 46%] [32mBuilding CXX object CMakeFiles/roadwork_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/roadwork_interfaces/msg/radar_detections__type_support.cpp.o[0m
+[7.778s] [ 47%] [32mBuilding C object CMakeFiles/roadwork_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/roadwork_interfaces/msg/detail/radar_detections__type_support.c.o[0m
+[7.839s] [ 49%] [32m[1mLinking C shared library libroadwork_interfaces__rosidl_typesupport_introspection_c.so[0m
+[7.839s] [ 50%] [32m[1mLinking CXX shared library libroadwork_interfaces__rosidl_typesupport_c.so[0m
+[7.900s] [ 50%] Built target roadwork_interfaces__rosidl_typesupport_c
+[7.925s] [ 52%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[7.936s] [ 52%] Built target roadwork_interfaces__rosidl_typesupport_introspection_c
+[7.959s] [ 53%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[7.959s] [ 55%] [32mBuilding CXX object CMakeFiles/roadwork_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/roadwork_interfaces/msg/detail/roadwork_beacon__type_support.cpp.o[0m
+[8.170s] [ 56%] [32mBuilding CXX object CMakeFiles/roadwork_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/roadwork_interfaces/msg/detail/dds_fastrtps/roadwork_beacon__type_support.cpp.o[0m
+[8.346s] [ 58%] [32mBuilding CXX object CMakeFiles/roadwork_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/roadwork_interfaces/msg/vehicle_command__type_support.cpp.o[0m
+[8.410s] [ 60%] [32mBuilding CXX object CMakeFiles/roadwork_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/roadwork_interfaces/msg/detail/radar_detection__type_support.cpp.o[0m
+[8.543s] [ 61%] [32mBuilding CXX object CMakeFiles/roadwork_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/roadwork_interfaces/msg/detail/vehicle_command__type_support_c.cpp.o[0m
+[8.757s] [ 63%] [32mBuilding CXX object CMakeFiles/roadwork_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/roadwork_interfaces/msg/detail/dds_fastrtps/radar_detection__type_support.cpp.o[0m
+[8.826s] [ 64%] [32mBuilding CXX object CMakeFiles/roadwork_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/roadwork_interfaces/msg/roadwork_beacon__type_support.cpp.o[0m
+[8.857s] [ 66%] [32mBuilding CXX object CMakeFiles/roadwork_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/roadwork_interfaces/msg/detail/radar_detections__type_support.cpp.o[0m
+[9.078s] [ 67%] [32mBuilding CXX object CMakeFiles/roadwork_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/roadwork_interfaces/msg/detail/roadwork_beacon__type_support_c.cpp.o[0m
+[9.164s] [ 69%] [32mBuilding CXX object CMakeFiles/roadwork_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/roadwork_interfaces/msg/radar_detection__type_support.cpp.o[0m
+[9.226s] [ 70%] [32m[1mLinking CXX shared library libroadwork_interfaces__rosidl_typesupport_introspection_cpp.so[0m
+[9.256s] [ 72%] [32mBuilding CXX object CMakeFiles/roadwork_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/roadwork_interfaces/msg/detail/dds_fastrtps/radar_detections__type_support.cpp.o[0m
+[9.357s] [ 72%] Built target roadwork_interfaces__rosidl_typesupport_introspection_cpp
+[9.374s] [ 73%] [32mBuilding CXX object CMakeFiles/roadwork_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/roadwork_interfaces/msg/detail/radar_detection__type_support_c.cpp.o[0m
+[9.542s] [ 75%] [32mBuilding CXX object CMakeFiles/roadwork_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/roadwork_interfaces/msg/radar_detections__type_support.cpp.o[0m
+[9.629s] [ 76%] [32mBuilding CXX object CMakeFiles/roadwork_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/roadwork_interfaces/msg/detail/radar_detections__type_support_c.cpp.o[0m
+[9.784s] [ 78%] [32m[1mLinking CXX shared library libroadwork_interfaces__rosidl_typesupport_fastrtps_cpp.so[0m
+[9.885s] [ 80%] [32m[1mLinking CXX shared library libroadwork_interfaces__rosidl_typesupport_cpp.so[0m
+[9.892s] [ 80%] Built target roadwork_interfaces__rosidl_typesupport_fastrtps_cpp
+[9.964s] [ 80%] Built target roadwork_interfaces__rosidl_typesupport_cpp
+[10.140s] [ 81%] [32m[1mLinking CXX shared library libroadwork_interfaces__rosidl_typesupport_fastrtps_c.so[0m
+[10.209s] [ 81%] Built target roadwork_interfaces__rosidl_typesupport_fastrtps_c
+[10.237s] [ 81%] Built target roadwork_interfaces
+[10.258s] [ 83%] [34m[1mGenerating Python code for ROS interfaces[0m
+[10.751s] [ 83%] Built target roadwork_interfaces__py
+[10.773s] [ 87%] [32mBuilding C object CMakeFiles/roadwork_interfaces__rosidl_generator_py.dir/rosidl_generator_py/roadwork_interfaces/msg/_radar_detections_s.c.o[0m
+[10.773s] [ 87%] [32mBuilding C object CMakeFiles/roadwork_interfaces__rosidl_generator_py.dir/rosidl_generator_py/roadwork_interfaces/msg/_vehicle_command_s.c.o[0m
+[10.773s] [ 87%] [32mBuilding C object CMakeFiles/roadwork_interfaces__rosidl_generator_py.dir/rosidl_generator_py/roadwork_interfaces/msg/_roadwork_beacon_s.c.o[0m
+[10.773s] [ 89%] [32mBuilding C object CMakeFiles/roadwork_interfaces__rosidl_generator_py.dir/rosidl_generator_py/roadwork_interfaces/msg/_radar_detection_s.c.o[0m
+[10.957s] [ 90%] [32m[1mLinking C shared library libroadwork_interfaces__rosidl_generator_py.so[0m
+[11.011s] [ 90%] Built target roadwork_interfaces__rosidl_generator_py
+[11.042s] [ 95%] [32mBuilding C object CMakeFiles/roadwork_interfaces_s__rosidl_typesupport_c.dir/rosidl_generator_py/roadwork_interfaces/_roadwork_interfaces_s.ep.rosidl_typesupport_c.c.o[0m
+[11.042s] [ 95%] [32mBuilding C object CMakeFiles/roadwork_interfaces_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/roadwork_interfaces/_roadwork_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[11.042s] [ 95%] [32mBuilding C object CMakeFiles/roadwork_interfaces_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/roadwork_interfaces/_roadwork_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[11.154s] [ 96%] [32m[1mLinking C shared module rosidl_generator_py/roadwork_interfaces/roadwork_interfaces_s__rosidl_typesupport_c.so[0m
+[11.159s] [ 98%] [32m[1mLinking C shared module rosidl_generator_py/roadwork_interfaces/roadwork_interfaces_s__rosidl_typesupport_introspection_c.so[0m
+[11.162s] [100%] [32m[1mLinking C shared module rosidl_generator_py/roadwork_interfaces/roadwork_interfaces_s__rosidl_typesupport_fastrtps_c.so[0m
+[11.194s] [100%] Built target roadwork_interfaces_s__rosidl_typesupport_c
+[11.197s] [100%] Built target roadwork_interfaces_s__rosidl_typesupport_introspection_c
+[11.199s] [100%] Built target roadwork_interfaces_s__rosidl_typesupport_fastrtps_c
+[11.220s] Invoked command in '/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_interfaces -- -j4 -l4
+[11.222s] Invoking command in '/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_interfaces
+[11.236s] -- Install configuration: ""
+[11.237s] -- Execute custom install script
+[11.237s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/ament_index/resource_index/rosidl_interfaces/roadwork_interfaces
+[11.248s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/msg/VehicleCommand.json
+[11.256s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/msg/RoadworkBeacon.json
+[11.265s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/msg/RadarDetection.json
+[11.274s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/msg/RadarDetections.json
+[11.283s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/radar_detection__functions.h
+[11.294s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/radar_detection__struct.h
+[11.309s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/radar_detection__type_support.h
+[11.322s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/radar_detections__functions.h
+[11.337s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/radar_detections__struct.h
+[11.346s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/radar_detections__type_support.h
+[11.354s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/roadwork_beacon__functions.h
+[11.362s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/roadwork_beacon__struct.h
+[11.371s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/roadwork_beacon__type_support.h
+[11.379s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/vehicle_command__functions.h
+[11.389s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/vehicle_command__struct.h
+[11.402s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/vehicle_command__type_support.h
+[11.417s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/radar_detection.h
+[11.432s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/radar_detections.h
+[11.444s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/roadwork_beacon.h
+[11.453s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/rosidl_generator_c__visibility_control.h
+[11.462s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/vehicle_command.h
+[11.471s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/environment/library_path.sh
+[11.479s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/environment/library_path.dsv
+[11.490s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/radar_detection__rosidl_typesupport_fastrtps_c.h
+[11.504s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/radar_detections__rosidl_typesupport_fastrtps_c.h
+[11.518s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/roadwork_beacon__rosidl_typesupport_fastrtps_c.h
+[11.535s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/vehicle_command__rosidl_typesupport_fastrtps_c.h
+[11.544s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[11.553s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/radar_detection__builder.hpp
+[11.562s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/radar_detection__struct.hpp
+[11.570s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/radar_detection__traits.hpp
+[11.578s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/radar_detection__type_support.hpp
+[11.589s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/radar_detections__builder.hpp
+[11.599s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/radar_detections__struct.hpp
+[11.615s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/radar_detections__traits.hpp
+[11.630s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/radar_detections__type_support.hpp
+[11.641s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/roadwork_beacon__builder.hpp
+[11.650s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/roadwork_beacon__struct.hpp
+[11.658s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/roadwork_beacon__traits.hpp
+[11.666s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/roadwork_beacon__type_support.hpp
+[11.680s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/vehicle_command__builder.hpp
+[11.697s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/vehicle_command__struct.hpp
+[11.719s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/vehicle_command__traits.hpp
+[11.743s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/vehicle_command__type_support.hpp
+[11.760s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/radar_detection.hpp
+[11.773s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/radar_detections.hpp
+[11.789s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/roadwork_beacon.hpp
+[11.798s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
+[11.814s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/vehicle_command.hpp
+[11.831s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/radar_detection__rosidl_typesupport_fastrtps_cpp.hpp
+[11.843s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/radar_detections__rosidl_typesupport_fastrtps_cpp.hpp
+[11.852s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/roadwork_beacon__rosidl_typesupport_fastrtps_cpp.hpp
+[11.860s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/vehicle_command__rosidl_typesupport_fastrtps_cpp.hpp
+[11.869s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[11.878s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/radar_detection__rosidl_typesupport_introspection_c.h
+[11.889s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/radar_detections__rosidl_typesupport_introspection_c.h
+[11.899s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/roadwork_beacon__rosidl_typesupport_introspection_c.h
+[11.913s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/vehicle_command__rosidl_typesupport_introspection_c.h
+[11.928s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[11.941s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/radar_detection__rosidl_typesupport_introspection_cpp.hpp
+[11.950s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/radar_detections__rosidl_typesupport_introspection_cpp.hpp
+[11.959s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/roadwork_beacon__rosidl_typesupport_introspection_cpp.hpp
+[11.967s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/include/roadwork_interfaces/roadwork_interfaces/msg/detail/vehicle_command__rosidl_typesupport_introspection_cpp.hpp
+[11.976s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/environment/pythonpath.sh
+[11.987s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/environment/pythonpath.dsv
+[11.998s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/python3.12/site-packages/roadwork_interfaces-0.1.0-py3.12.egg-info/PKG-INFO
+[12.013s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/python3.12/site-packages/roadwork_interfaces-0.1.0-py3.12.egg-info/SOURCES.txt
+[12.026s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/python3.12/site-packages/roadwork_interfaces-0.1.0-py3.12.egg-info/dependency_links.txt
+[12.039s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/python3.12/site-packages/roadwork_interfaces-0.1.0-py3.12.egg-info/top_level.txt
+[12.049s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/python3.12/site-packages/roadwork_interfaces/__init__.py
+[12.058s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/python3.12/site-packages/roadwork_interfaces/_roadwork_interfaces_s.ep.rosidl_typesupport_c.c
+[12.066s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/python3.12/site-packages/roadwork_interfaces/_roadwork_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+[12.075s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/python3.12/site-packages/roadwork_interfaces/_roadwork_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+[12.083s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/python3.12/site-packages/roadwork_interfaces/msg/__init__.py
+[12.094s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/python3.12/site-packages/roadwork_interfaces/msg/_radar_detection.py
+[12.107s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/python3.12/site-packages/roadwork_interfaces/msg/_radar_detection_s.c
+[12.119s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/python3.12/site-packages/roadwork_interfaces/msg/_radar_detections.py
+[12.135s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/python3.12/site-packages/roadwork_interfaces/msg/_radar_detections_s.c
+[12.144s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/python3.12/site-packages/roadwork_interfaces/msg/_roadwork_beacon.py
+[12.153s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/python3.12/site-packages/roadwork_interfaces/msg/_roadwork_beacon_s.c
+[12.161s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/python3.12/site-packages/roadwork_interfaces/msg/_vehicle_command.py
+[12.169s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/python3.12/site-packages/roadwork_interfaces/msg/_vehicle_command_s.c
+[12.178s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/python3.12/site-packages/roadwork_interfaces/roadwork_interfaces_s__rosidl_typesupport_c.so
+[12.188s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/python3.12/site-packages/roadwork_interfaces/roadwork_interfaces_s__rosidl_typesupport_fastrtps_c.so
+[12.198s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/python3.12/site-packages/roadwork_interfaces/roadwork_interfaces_s__rosidl_typesupport_introspection_c.so
+[12.213s] -- Up-to-date symlink: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/python3.12/site-packages/roadwork_interfaces/roadwork_interfaces_s__rosidl_typesupport_fastrtps_c.so
+[12.213s] -- Up-to-date symlink: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/python3.12/site-packages/roadwork_interfaces/roadwork_interfaces_s__rosidl_typesupport_introspection_c.so
+[12.213s] -- Up-to-date symlink: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/python3.12/site-packages/roadwork_interfaces/roadwork_interfaces_s__rosidl_typesupport_c.so
+[12.214s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/rust/Cargo.toml
+[12.230s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/rust/build.rs
+[12.241s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/rust/src/lib.rs
+[12.250s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/rust/src/msg.rs
+[12.258s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/rust/src/msg/rmw.rs
+[12.267s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/msg/VehicleCommand.idl
+[12.276s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/msg/RoadworkBeacon.idl
+[12.285s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/msg/RadarDetection.idl
+[12.296s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/msg/RadarDetections.idl
+[12.312s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/msg/VehicleCommand.msg
+[12.325s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/msg/RoadworkBeacon.msg
+[12.339s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/msg/RadarDetection.msg
+[12.348s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/msg/RadarDetections.msg
+[12.356s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/ament_index/resource_index/package_run_dependencies/roadwork_interfaces
+[12.364s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/ament_index/resource_index/parent_prefix_path/roadwork_interfaces
+[12.373s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/environment/ament_prefix_path.sh
+[12.381s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/environment/ament_prefix_path.dsv
+[12.392s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/environment/path.sh
+[12.405s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/environment/path.dsv
+[12.418s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/local_setup.bash
+[12.434s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/local_setup.sh
+[12.444s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/local_setup.zsh
+[12.452s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/local_setup.dsv
+[12.461s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/package.dsv
+[12.469s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/ament_index/resource_index/packages/roadwork_interfaces
+[12.477s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/cmake/rosidl_cmake-extras.cmake
+[12.486s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[12.497s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[12.512s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[12.525s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[12.537s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[12.546s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[12.555s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/cmake/rosidl_cmake_aggregate_target-extras.cmake
+[12.563s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/cmake/roadwork_interfacesConfig.cmake
+[12.572s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/cmake/roadwork_interfacesConfig-version.cmake
+[12.580s] -- Symlinking: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/package.xml
+[12.592s] -- Installing: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/libroadwork_interfaces__rosidl_generator_c.so
+[12.592s] -- Set non-toolchain portion of runtime path of "/home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/libroadwork_interfaces__rosidl_generator_c.so" to ""
+[12.592s] -- Installing: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/libroadwork_interfaces__rosidl_typesupport_fastrtps_c.so
+[12.593s] -- Set non-toolchain portion of runtime path of "/home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/libroadwork_interfaces__rosidl_typesupport_fastrtps_c.so" to ""
+[12.593s] -- Installing: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/libroadwork_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[12.593s] -- Set non-toolchain portion of runtime path of "/home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/libroadwork_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""
+[12.594s] -- Installing: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/libroadwork_interfaces__rosidl_typesupport_introspection_c.so
+[12.594s] -- Set non-toolchain portion of runtime path of "/home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/libroadwork_interfaces__rosidl_typesupport_introspection_c.so" to ""
+[12.594s] -- Installing: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/libroadwork_interfaces__rosidl_typesupport_c.so
+[12.594s] -- Set non-toolchain portion of runtime path of "/home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/libroadwork_interfaces__rosidl_typesupport_c.so" to ""
+[12.594s] -- Installing: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/libroadwork_interfaces__rosidl_typesupport_introspection_cpp.so
+[12.595s] -- Set non-toolchain portion of runtime path of "/home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/libroadwork_interfaces__rosidl_typesupport_introspection_cpp.so" to ""
+[12.595s] -- Installing: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/libroadwork_interfaces__rosidl_typesupport_cpp.so
+[12.595s] -- Set non-toolchain portion of runtime path of "/home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/libroadwork_interfaces__rosidl_typesupport_cpp.so" to ""
+[12.659s] Listing '/home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/python3.12/site-packages/roadwork_interfaces'...
+[12.659s] Compiling '/home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/python3.12/site-packages/roadwork_interfaces/__init__.py'...
+[12.659s] Listing '/home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/python3.12/site-packages/roadwork_interfaces/msg'...
+[12.659s] Compiling '/home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/python3.12/site-packages/roadwork_interfaces/msg/__init__.py'...
+[12.659s] Compiling '/home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/python3.12/site-packages/roadwork_interfaces/msg/_radar_detection.py'...
+[12.659s] Compiling '/home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/python3.12/site-packages/roadwork_interfaces/msg/_radar_detections.py'...
+[12.659s] Compiling '/home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/python3.12/site-packages/roadwork_interfaces/msg/_roadwork_beacon.py'...
+[12.659s] Compiling '/home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/python3.12/site-packages/roadwork_interfaces/msg/_vehicle_command.py'...
+[12.664s] -- Installing: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/libroadwork_interfaces__rosidl_generator_py.so
+[12.665s] -- Set non-toolchain portion of runtime path of "/home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/lib/libroadwork_interfaces__rosidl_generator_py.so" to ""
+[12.665s] -- Installing: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/cmake/export_roadwork_interfaces__rosidl_generator_cExport.cmake
+[12.665s] -- Installing: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/cmake/export_roadwork_interfaces__rosidl_generator_cExport-noconfig.cmake
+[12.665s] -- Installing: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/cmake/export_roadwork_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+[12.665s] -- Installing: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/cmake/export_roadwork_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[12.666s] -- Installing: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/cmake/export_roadwork_interfaces__rosidl_generator_cppExport.cmake
+[12.666s] -- Installing: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/cmake/export_roadwork_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+[12.666s] -- Installing: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/cmake/export_roadwork_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[12.666s] -- Installing: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/cmake/roadwork_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[12.667s] -- Installing: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/cmake/roadwork_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[12.667s] -- Installing: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/cmake/roadwork_interfaces__rosidl_typesupport_cExport.cmake
+[12.667s] -- Installing: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/cmake/roadwork_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[12.667s] -- Installing: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/cmake/roadwork_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[12.667s] -- Installing: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/cmake/roadwork_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[12.668s] -- Installing: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/cmake/roadwork_interfaces__rosidl_typesupport_cppExport.cmake
+[12.668s] -- Installing: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/cmake/roadwork_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[12.668s] -- Installing: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/cmake/export_roadwork_interfaces__rosidl_generator_pyExport.cmake
+[12.668s] -- Installing: /home/sergioros/iasys_project_ws/MESCC-IASYS/install/roadwork_interfaces/share/roadwork_interfaces/cmake/export_roadwork_interfaces__rosidl_generator_pyExport-noconfig.cmake
+[12.672s] Invoked command in '/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_interfaces

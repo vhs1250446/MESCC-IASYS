@@ -1,0 +1,97 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-63d05d52f84641aa193d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "roadwork_student",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "act_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-act_node-56d925cce060057a3b32.json",
+					"name" : "act_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "plan_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-plan_node-2726d54cea40736dc691.json",
+					"name" : "plan_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "roadwork_student_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-roadwork_student_uninstall-ee5441438638b2c63227.json",
+					"name" : "roadwork_student_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "sense_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-sense_node-1c85634f71f11a07de9f.json",
+					"name" : "sense_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-bc2fde31863d214deab8.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_student",
+		"source" : "/home/sergioros/iasys_project_ws/MESCC-IASYS/src/roadwork_student"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

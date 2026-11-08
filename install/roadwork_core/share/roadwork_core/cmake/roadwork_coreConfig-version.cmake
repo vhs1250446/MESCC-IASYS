@@ -1,0 +1,1 @@
+/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_core/ament_cmake_core/roadwork_coreConfig-version.cmake

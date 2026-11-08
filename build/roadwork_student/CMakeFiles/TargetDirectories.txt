@@ -1,0 +1,12 @@
+/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_student/CMakeFiles/uninstall.dir
+/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_student/CMakeFiles/roadwork_student_uninstall.dir
+/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_student/CMakeFiles/sense_node.dir
+/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_student/CMakeFiles/plan_node.dir
+/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_student/CMakeFiles/act_node.dir
+/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_student/CMakeFiles/test.dir
+/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_student/CMakeFiles/edit_cache.dir
+/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_student/CMakeFiles/rebuild_cache.dir
+/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_student/CMakeFiles/list_install_components.dir
+/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_student/CMakeFiles/install.dir
+/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_student/CMakeFiles/install/local.dir
+/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_student/CMakeFiles/install/strip.dir

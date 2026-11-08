@@ -1,0 +1,25 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/roadwork_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/roadwork_interfaces/msg/detail/radar_detection__type_support.c.o"
+  "CMakeFiles/roadwork_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/roadwork_interfaces/msg/detail/radar_detection__type_support.c.o.d"
+  "CMakeFiles/roadwork_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/roadwork_interfaces/msg/detail/radar_detections__type_support.c.o"
+  "CMakeFiles/roadwork_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/roadwork_interfaces/msg/detail/radar_detections__type_support.c.o.d"
+  "CMakeFiles/roadwork_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/roadwork_interfaces/msg/detail/roadwork_beacon__type_support.c.o"
+  "CMakeFiles/roadwork_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/roadwork_interfaces/msg/detail/roadwork_beacon__type_support.c.o.d"
+  "CMakeFiles/roadwork_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/roadwork_interfaces/msg/detail/vehicle_command__type_support.c.o"
+  "CMakeFiles/roadwork_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/roadwork_interfaces/msg/detail/vehicle_command__type_support.c.o.d"
+  "libroadwork_interfaces__rosidl_typesupport_introspection_c.pdb"
+  "libroadwork_interfaces__rosidl_typesupport_introspection_c.so"
+  "rosidl_typesupport_introspection_c/roadwork_interfaces/msg/detail/radar_detection__rosidl_typesupport_introspection_c.h"
+  "rosidl_typesupport_introspection_c/roadwork_interfaces/msg/detail/radar_detection__type_support.c"
+  "rosidl_typesupport_introspection_c/roadwork_interfaces/msg/detail/radar_detections__rosidl_typesupport_introspection_c.h"
+  "rosidl_typesupport_introspection_c/roadwork_interfaces/msg/detail/radar_detections__type_support.c"
+  "rosidl_typesupport_introspection_c/roadwork_interfaces/msg/detail/roadwork_beacon__rosidl_typesupport_introspection_c.h"
+  "rosidl_typesupport_introspection_c/roadwork_interfaces/msg/detail/roadwork_beacon__type_support.c"
+  "rosidl_typesupport_introspection_c/roadwork_interfaces/msg/detail/vehicle_command__rosidl_typesupport_introspection_c.h"
+  "rosidl_typesupport_introspection_c/roadwork_interfaces/msg/detail/vehicle_command__type_support.c"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang C)
+  include(CMakeFiles/roadwork_interfaces__rosidl_typesupport_introspection_c.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

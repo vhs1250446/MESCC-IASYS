@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "roadwork_interfaces__py",
+		"source" : "/home/sergioros/iasys_project_ws/MESCC-IASYS/build/roadwork_interfaces/roadwork_interfaces__py"
+	}
+}
