@@ -1,0 +1,13 @@
+act:
+  ros__parameters:
+    use_sim_time: true
+    control_period: 0.05
+    plan_timeout: 0.3
+    scene_timeout: 0.5
+    odom_timeout: 0.15
+    future_tolerance: 1.0e-6
+    speed_cap: 3.9
+    max_steer: 0.45
+    max_steer_rate: 0.6
+    wheelbase: 2.4
+    front_offset: 0.9
