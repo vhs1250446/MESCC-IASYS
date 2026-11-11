@@ -30,4 +30,8 @@ float64 speed_raw             # m/s, before limits
 float64 steering_raw          # rad, before limits
 float64 speed_cmd             # m/s, as published
 float64 steering_cmd          # rad, as published
-uint8 limit_flags             # bitmask: speed cap, stop line, steering clamp, slew
+uint8 LIMIT_SPEED       = 1   # speed reduced by speed_limit or speed_cap
+uint8 LIMIT_STOP_LINE   = 2   # speed reduced by the stop-line braking curve
+uint8 LIMIT_STEER_CLAMP = 4   # steering clamped to +/-max_steer
+uint8 LIMIT_STEER_SLEW  = 8   # steering change limited by max_steer_rate
+uint8 limit_flags             # bitmask of the LIMIT_* values that changed the command this tick

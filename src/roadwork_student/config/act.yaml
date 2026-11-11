@@ -11,3 +11,10 @@ act:
     max_steer_rate: 0.6
     wheelbase: 2.4
     front_offset: 0.9
+    lookahead_gain: 1.0
+    lookahead_min: 2.5
+    lookahead_max: 6.0
+    speed_preview: 0.5
+    stop_decel: 2.0
+    stop_margin: 0.2
+    control_delay: 0.1

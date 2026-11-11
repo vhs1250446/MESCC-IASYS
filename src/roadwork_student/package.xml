@@ -8,5 +8,7 @@
   <depend>roadwork_solution_msgs</depend>
   <depend>nav_msgs</depend>
   <depend>roadwork_interfaces</depend>
+  <depend>geometry_msgs</depend>
+  <depend>builtin_interfaces</depend>
   <export><build_type>ament_cmake</build_type></export>
 </package>

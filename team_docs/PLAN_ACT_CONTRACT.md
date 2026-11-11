@@ -153,10 +153,11 @@ reason codes and string representations Act reports:
 | waiting for a fresh plan sequence | `REASON_WAITING_NEW_SEQ` | 9 | `WAITING_NEW_SEQ` |
 | unrecoverable fault | `REASON_FAULT` | 255 | `FAULT` |
 
-To leave SAFE_STOP, Act waits for a valid plan with a `seq` higher than the one
-it had when it stopped. While it is waiting, the reason is
-`REASON_WAITING_NEW_SEQ`. This avoids starting again on an old plan that happens
-to look valid.
+To leave SAFE_STOP, Act waits for a valid plan whose `header.stamp` is strictly
+newer than the stamp of the plan it held when it stopped. While it is waiting,
+the reason is `REASON_WAITING_NEW_SEQ`. Sim time only moves forward, so this
+still works if Plan restarts and its `seq` goes back to 1. `seq` is kept for
+tracing plans in logs and bags.
 
 Plan also checks for old Scene data by itself. The scene check in Act is only a
 second safety layer.
