@@ -1,0 +1,18 @@
+header:
+  stamp:
+    sec: 5
+    nanosec: 0
+  frame_id: map
+scene_stamp:
+  sec: 4
+  nanosec: 950000000
+valid_until:
+  sec: 5
+  nanosec: 300000000
+seq: 35
+mode: 255
+path: []
+speed_limit: 4.0
+has_stop_line: false
+stop_line_x: 0.0
+decision_state: PLAN_FATAL_FAULT

@@ -21,5 +21,6 @@ ament_target_dependencies(act_node rclcpp nav_msgs roadwork_interfaces roadwork_
 install(TARGETS act_node DESTINATION lib/${PROJECT_NAME})
 
 install(DIRECTORY config DESTINATION share/${PROJECT_NAME})
+install(DIRECTORY test_data DESTINATION share/${PROJECT_NAME})
 
 ament_package()
