@@ -44,4 +44,4 @@ When designing and generating trajectory waypoints:
 ## 4. Document Index
 
 - [PLAN_ACT_CONTRACT.md](PLAN_ACT_CONTRACT.md): Contract between Plan and Act (`/solution/plan`, `/solution/act_status`).
-- *(Future)* `SENSE_PLAN_CONTRACT.md`: Contract between Sense and Plan (`/solution/scene`).
+- [SENSE_PLAN_CONTRACT.md](SENSE_PLAN_CONTRACT.md): Contract between Sense and Plan (`/solution/scene`, `/solution/sense_status`).
