@@ -51,3 +51,38 @@ When designing or evaluating internal interfaces, state machines, or contracts, 
       --qos-reliability reliable --qos-durability volatile --qos-depth 1 \
       < src/roadwork_student/test_data/plan/yaml/01_nominal_full_course.yaml
     ```
+
+## 5. No Over-Engineering — Scope Discipline
+
+Every interface, message field, algorithm, and node feature must be **traceable to a specific
+requirement in the Project Contract** (`IASYS Roadwork Challenge 2026.pdf`, `docs/INTERFACES.md`,
+`docs/SCENARIOS.md`) or to an explicitly named delivery milestone (D1 or D2).
+
+Before adding any element ask:
+1. **Which scenario (S1–S5) or delivery (D1/D2) requires this?**
+   If the answer is "none" or "it might be useful later", do not add it.
+2. **Can it be computed trivially from fields already in the message?**
+   If yes, drop it; leave the arithmetic to the subscriber.
+3. **Does it require the implementer to invent a metric or algorithm not described in the PDF?**
+   If yes, the contract is under-specified. Define the computation rule explicitly or drop the field.
+4. **Is the complexity appropriate for the delivery milestone?**
+   D1 covers S1–S2 only. Do not design D2 features into D1 interfaces.
+
+### Specific guardrails derived from the PDF
+
+- **Camera:** No confidence score is provided by the simulator. Any `confidence` field in an
+  internal message must name its exact computation rule (e.g., "fraction of pixels matching the
+  winning colour class"). A floating-point score with an arbitrary threshold (e.g., "> 0.8") that
+  is not grounded in the PDF's sensor model is over-engineering.
+- **Radar:** Ego-velocity correction must be assigned to exactly one node and stated explicitly.
+  Leaving it as an "open question" across a node boundary is a contract defect, not a design choice.
+- **Beacon:** `valid_for = 1.2 s` is a fixed project-contract constant. Never publish a derived
+  `valid_until` timestamp when the subscriber can compute `stamp + 1.2 s` in one line.
+- **Sensor status:** A dedicated status/health message for a source node is only justified when
+  that node has an upstream input that can stall it (like Act waiting on Plan). Sense is a
+  terminal source node; collapse health reporting into a `string<=32` state field on the primary
+  message until D2 diagnostics prove otherwise.
+- **Decision logic belongs to its node.** Entry-permission conditions, yield logic, and recovery
+  policies belong in the node's own contract document, not in the upstream interface contract.
+  An interface contract owns *wire format and validity semantics*, not the downstream node's
+  decision algorithm.
