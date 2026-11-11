@@ -1,9 +1,25 @@
 std_msgs/Header header
-uint8 STATE_INIT = 0
-uint8 STATE_TRACKING = 1
+
+uint8 STATE_INIT      = 0
+uint8 STATE_TRACKING  = 1
 uint8 STATE_SAFE_STOP = 2
+uint8 STATE_FAULT     = 255
 uint8 state
-string reason                 # why SAFE_STOP, e.g. PLAN_EXPIRED, ODOM_STALE
+
+uint8 REASON_NONE            = 0
+uint8 REASON_NO_PLAN         = 1
+uint8 REASON_PLAN_EXPIRED    = 2
+uint8 REASON_PLAN_FUTURE     = 3
+uint8 REASON_PLAN_MALFORMED  = 4
+uint8 REASON_SCENE_STALE     = 5
+uint8 REASON_ODOM_STALE      = 6
+uint8 REASON_ODOM_MALFORMED  = 7
+uint8 REASON_PLAN_MODE_STOP  = 8
+uint8 REASON_WAITING_NEW_SEQ = 9
+uint8 REASON_FAULT           = 255
+uint8 reason_code
+
+string<=32 reason             # human-readable reason string, e.g. PLAN_EXPIRED, ODOM_STALE
 uint32 plan_seq               # seq of the plan in use
 float64 plan_age              # s, now minus plan header stamp
 float64 odom_age              # s, now minus odometry stamp

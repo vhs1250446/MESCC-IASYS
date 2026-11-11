@@ -25,8 +25,8 @@ useful once a newer one has arrived. Act is the only node allowed to publish on
 
 ## Conventions
 
-We use SI units everywhere: metres, metres per second, radians and seconds.
-Positions are in the `map` frame and always refer to the same point the
+We use SI units everywhere: metres, metres per second, radians and seconds (REP-103).
+Positions are in the `map` frame (REP-105) and always refer to the same point the
 odometry reports, which is the rear axle of the vehicle. When we talk about the
 front of the vehicle we mean x + 0.9 m, since the simulator models the car as a
 disc with a 0.9 m radius.
@@ -38,7 +38,7 @@ sim time, which is the same tolerance the simulator uses.
 
 ## The path
 
-The path is a list of `PlanPoint`, and each point has three values:
+The path is a bounded list of `PlanPoint` (`PlanPoint[<=250] path`), and each point has three values:
 
 - `x` and `y`: where the rear axle should pass, in metres in the map frame.
 - `speed`: the speed we want when the vehicle reaches that point, in m/s. It is
@@ -50,13 +50,27 @@ path and the speed profile can never end up with different lengths.
 Plan always follows these rules when building a path:
 
 1. When the mode is MODE_TRACK, the path is never empty.
-2. Points go in the direction of travel and are about 0.5 m apart.
-3. The first point is at or behind the vehicle, so Act always has something to
+2. Points go in the direction of travel with nominal spacing <= 0.5 m. In deceleration
+   and stopping zones, Plan may generate denser points (e.g. 0.1 to 0.2 m) to ensure
+   a smooth velocity ramp.
+3. The path has an explicit upper bound of 250 points (`PlanPoint[<=250] path`) to guarantee
+   real-time determinism with zero dynamic heap allocation.
+4. The first point is at or behind the vehicle, so Act always has something to
    track from where it is.
-4. Every message carries the whole path up to the goal, not just a piece of it.
-5. The last point is close to the goal (80.2, -1.75) and has speed 0.
-6. Speeds never go above `speed_limit`, and slowing down between two points
+5. Critical boundary waypoints are explicitly inserted into the path array:
+   - When a stop line is enforced, an exact stopping waypoint is placed at
+     `x_rear = stop_line_x - 0.9 - margin` (e.g. `x = 23.8 m`) with speed 0.
+   - The last point is at the exact goal `(80.2, -1.75)` and has speed 0.
+6. Every message carries the whole path up to the goal, not just a piece of it.
+7. Speeds never go above `speed_limit`, and slowing down between two points
    never needs more than 2.0 m/s^2.
+
+> **Note for the person implementing Act:**
+> While Act is free to select the closest discrete waypoint for lookahead tracking,
+> using discrete points spaced 0.5 m apart can cause the lookahead point to jump
+> by 0.5 m at a time, creating step changes in the lookahead angle and command chattering.
+> It is strongly recommended to compute the lookahead target by interpolating continuously
+> along the chord between adjacent waypoints.
 
 ## The Plan message
 
@@ -70,15 +84,17 @@ Plan always follows these rules when building a path:
 - `seq`: a counter that goes up by one every time Plan publishes, even if
   nothing changed. Act uses it to know that Plan is still alive and that a plan
   is really new.
-- `mode`: either MODE_STOP, which means "stop now and ignore the path", or
-  MODE_TRACK, which means "follow the path".
-- `path`: the list of points described above.
+- `mode`:
+  - `MODE_STOP = 0`: brake to standstill now and ignore the path.
+  - `MODE_TRACK = 1`: follow the path under speed profile and constraints.
+  - `MODE_FAULT = 255`: unrecoverable fault; emergency stop.
+- `path`: bounded list of `PlanPoint[<=250]`.
 - `speed_limit`: the speed limit from the beacon. If Plan has no beacon cached
   yet, it uses 4.0 m/s.
 - `has_stop_line` and `stop_line_x`: while `has_stop_line` is true, the front of
   the vehicle must not go past `stop_line_x`.
-- `decision_state`: the name of Plan's current state. It is only there so we can
-  read it in the logs; Act never makes decisions based on it.
+- `decision_state`: `string<=32`, the name of Plan's current state for logs and
+  traceability. Act never makes decisions based on it.
 
 ## How we stop before the work zone
 
@@ -120,23 +136,26 @@ once in Plan and once in Act.
 ## When Act stops on its own
 
 If something is wrong with its inputs, Act goes into SAFE_STOP: it commands
-speed 0 and keeps the steering where it is. These are the cases, with the reason
-code Act reports:
+speed 0 and keeps the steering where it is. These are the cases, with the numerical
+reason codes and string representations Act reports:
 
-| What happened | Reason code |
-|---|---|
-| no plan has arrived yet | REASON_NO_PLAN |
-| the plan is past `valid_until` or older than 0.3 s | REASON_PLAN_EXPIRED |
-| the plan stamp is in the future | REASON_PLAN_FUTURE |
-| MODE_TRACK with an empty path, or a value that is NaN or infinite | REASON_PLAN_MALFORMED |
-| the scene behind the plan is older than 0.5 s | REASON_SCENE_STALE |
-| odometry is older than 0.15 s | REASON_ODOM_STALE |
-| odometry contains NaN or infinite values | REASON_ODOM_MALFORMED |
-| Plan asked for MODE_STOP | REASON_PLAN_MODE_STOP |
+| What happened | Reason constant | Code (`uint8`) | String (`reason`) |
+|---|---|---|---|
+| tracking normally | `REASON_NONE` | 0 | `NONE` |
+| no plan has arrived yet | `REASON_NO_PLAN` | 1 | `NO_PLAN` |
+| the plan is past `valid_until` or older than 0.3 s | `REASON_PLAN_EXPIRED` | 2 | `PLAN_EXPIRED` |
+| the plan stamp is in the future | `REASON_PLAN_FUTURE` | 3 | `PLAN_FUTURE` |
+| MODE_TRACK with an empty path, or NaN/infinite value | `REASON_PLAN_MALFORMED` | 4 | `PLAN_MALFORMED` |
+| the scene behind the plan is older than 0.5 s | `REASON_SCENE_STALE` | 5 | `SCENE_STALE` |
+| odometry is older than 0.15 s | `REASON_ODOM_STALE` | 6 | `ODOM_STALE` |
+| odometry contains NaN or infinite values | `REASON_ODOM_MALFORMED` | 7 | `ODOM_MALFORMED` |
+| Plan asked for MODE_STOP | `REASON_PLAN_MODE_STOP` | 8 | `PLAN_MODE_STOP` |
+| waiting for a fresh plan sequence | `REASON_WAITING_NEW_SEQ` | 9 | `WAITING_NEW_SEQ` |
+| unrecoverable fault | `REASON_FAULT` | 255 | `FAULT` |
 
 To leave SAFE_STOP, Act waits for a valid plan with a `seq` higher than the one
 it had when it stopped. While it is waiting, the reason is
-REASON_WAITING_NEW_SEQ. This avoids starting again on an old plan that happens
+`REASON_WAITING_NEW_SEQ`. This avoids starting again on an old plan that happens
 to look valid.
 
 Plan also checks for old Scene data by itself. The scene check in Act is only a
@@ -147,9 +166,13 @@ second safety layer.
 Act publishes this message every tick so we can see what it was doing at any
 moment, both live and later from the recorded bags.
 
-- `state`: STATE_INIT before the first valid plan, STATE_TRACKING when driving,
-  STATE_SAFE_STOP when stopped because of a problem.
-- `reason`: one of the reason codes above, or REASON_NONE while tracking.
+- `state`:
+  - `STATE_INIT = 0`: before the first valid plan
+  - `STATE_TRACKING = 1`: while actively driving
+  - `STATE_SAFE_STOP = 2`: when stopped because of an input problem
+  - `STATE_FAULT = 255`: unrecoverable failure
+- `reason_code`: one of the numerical reason codes above.
+- `reason`: `string<=32`, human-readable version of the reason code.
 - `plan_seq`: the `seq` of the plan Act is using.
 - `plan_age` and `odom_age`: how old the plan and the odometry are, in seconds.
 - `target_index`: the path point closest to the vehicle.
