@@ -10,6 +10,7 @@
 #include "builtin_interfaces/msg/time.hpp"
 #include "nav_msgs/msg/odometry.hpp"
 #include "roadwork_solution_msgs/msg/plan.hpp"
+#include "roadwork_student/time_utils.hpp"
 
 namespace roadwork_student {
 
@@ -19,8 +20,6 @@ struct ValidatorParams {
   double odom_timeout;     
   double future_tolerance; 
 };
-
-double to_seconds(const builtin_interfaces::msg::Time & t);
 
 uint8_t validate_plan(
   const roadwork_solution_msgs::msg::Plan * plan, double now, const ValidatorParams & p);

@@ -16,6 +16,7 @@ never touch the supplied `roadwork_interfaces`.
 | /solution/plan | roadwork_solution_msgs/msg/Plan | plan | act | reliable, volatile, keep last 1 | 10 Hz |
 | /solution/path | nav_msgs/msg/Path | plan | rviz | reliable, volatile, keep last 1 | 10 Hz |
 | /solution/state | std_msgs/msg/String | plan | logs | reliable, volatile, keep last 10 | 10 Hz |
+| /solution/plan_status | roadwork_solution_msgs/msg/PlanStatus | plan | logs | reliable, volatile, keep last 10 | 10 Hz |
 | /solution/act_status | roadwork_solution_msgs/msg/ActStatus | act | logs | reliable, volatile, keep last 10 | 20 Hz |
 | /vehicle/command | roadwork_interfaces/msg/VehicleCommand | act | simulator | reliable, volatile, keep last 10 | 20 Hz |
 
@@ -88,7 +89,8 @@ Plan always follows these rules when building a path:
   - `MODE_STOP = 0`: brake to standstill now and ignore the path.
   - `MODE_TRACK = 1`: follow the path under speed profile and constraints.
   - `MODE_FAULT = 255`: unrecoverable fault; emergency stop.
-- `path`: bounded list of `PlanPoint[<=250]`.
+- `path`: bounded list of `PlanPoint[<=250]`. Empty in `MODE_STOP` and
+  `MODE_FAULT`, because Act ignores it there.
 - `speed_limit`: the speed limit from the beacon. If Plan has no beacon cached
   yet, it uses 4.0 m/s.
 - `has_stop_line` and `stop_line_x`: while `has_stop_line` is true, the front of
@@ -99,10 +101,14 @@ Plan always follows these rules when building a path:
 ## How we stop before the work zone
 
 Waiting before the entry line is done with the stop line, not with a separate
-mode. While Plan is not allowed to enter (the panel says STOP or UNKNOWN, the
-beacon or camera data is too old, or we do not trust the obstacle data yet),
-Plan sets `has_stop_line = true` and `stop_line_x = 25.0`. When entry is
-allowed, Plan clears the stop line.
+mode. On the wire, `has_stop_line = true` means "the front (x + 0.9) stays
+below `stop_line_x`"; Plan sets `stop_line_x = entry_x` (25.0) and also gives
+the path speed 0 from the stop point onwards. Plan never sets a stop line
+behind the vehicle front.
+
+When Plan sets and clears the stop line (entry permission, commitment,
+beacon-loss policy) is Plan's own decision logic and is specified in
+[PLAN_NODE.md](PLAN_NODE.md), not in this interface contract.
 
 Act respects the stop line on its own, even if the speed profile from Plan is
 wrong. This way the rule "do not cross x = 25 during STOP" is protected twice,

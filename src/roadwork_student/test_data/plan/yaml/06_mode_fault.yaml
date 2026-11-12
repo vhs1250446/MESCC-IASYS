@@ -15,4 +15,4 @@ path: []
 speed_limit: 4.0
 has_stop_line: false
 stop_line_x: 0.0
-decision_state: PLAN_FATAL_FAULT
+decision_state: FAULT

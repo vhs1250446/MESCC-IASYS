@@ -15,6 +15,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/PlanPoint.msg"
   "msg/Plan.msg"
   "msg/ActStatus.msg"
+  "msg/PlanStatus.msg"
   "msg/Scene.msg"
   # "msg/SenseStatus.msg"  -- deferred to D2; fields covered by sense_state + stale_flags on Scene
   DEPENDENCIES std_msgs builtin_interfaces

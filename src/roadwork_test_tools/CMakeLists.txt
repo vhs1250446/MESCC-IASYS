@@ -9,6 +9,7 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(roadwork_solution_msgs REQUIRED)
+find_package(nav_msgs REQUIRED)
 # uncomment the following section in order to fill in
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
@@ -19,6 +20,12 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 add_executable(plan_stub src/plan_stub.cpp)
 ament_target_dependencies(plan_stub rclcpp roadwork_solution_msgs)
 install(TARGETS plan_stub DESTINATION lib/${PROJECT_NAME})
+
+add_executable(scene_stub src/scene_stub.cpp)
+ament_target_dependencies(scene_stub rclcpp nav_msgs roadwork_solution_msgs)
+install(TARGETS scene_stub DESTINATION lib/${PROJECT_NAME})
+
+install(DIRECTORY launch DESTINATION share/${PROJECT_NAME})
 
 
 if(BUILD_TESTING)

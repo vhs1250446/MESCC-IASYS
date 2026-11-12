@@ -1,0 +1,15 @@
+# Plan node tuning parameters. Contract constants (vehicle limits, beacon
+# validity, goal, grid and ramp geometry) are constexpr in path_builder.hpp /
+# plan_decision.hpp; see team_docs/PLAN_NODE.md for every value's source.
+plan:
+  ros__parameters:
+    use_sim_time: true
+    plan_period: 0.1        # s, 10 Hz (PLAN_ACT_CONTRACT)
+    plan_validity: 0.3      # s, valid_until = stamp + 0.3 (PLAN_ACT_CONTRACT)
+    scene_timeout: 0.5      # s, max scene age (SENSE_PLAN_CONTRACT)
+    future_tolerance: 1.0e-6
+    v_cruise: 3.8           # m/s, (0, 4.0]
+    a_acc: 1.4              # m/s^2, (0, 1.5]
+    a_dec: 1.8              # m/s^2, (0, 2.0]
+    stop_margin: 0.3        # m, [0, 1]; front stops at entry_x - 0.3 (Act uses 0.2 as backstop)
+    slew_margin: 0.8        # (0, 1]; fraction of the 0.6 rad/s steering slew the profile may use

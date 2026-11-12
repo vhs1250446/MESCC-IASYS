@@ -11,6 +11,11 @@
 
   <depend>rclcpp</depend>
   <depend>roadwork_solution_msgs</depend>
+  <depend>nav_msgs</depend>
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+  <exec_depend>roadwork_sim</exec_depend>
+  <exec_depend>roadwork_student</exec_depend>
 
 
   <test_depend>ament_lint_auto</test_depend>

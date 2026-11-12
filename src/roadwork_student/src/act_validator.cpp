@@ -10,10 +10,6 @@ using ActStatus = roadwork_solution_msgs::msg::ActStatus;
 using Plan = roadwork_solution_msgs::msg::Plan;
 using Odometry = nav_msgs::msg::Odometry;
 
-double to_seconds(const builtin_interfaces::msg::Time & t) {
-  return static_cast<double>(t.sec) + static_cast<double>(t.nanosec) * 1e-9;
-}
-
 namespace {
 
 bool plan_is_well_formed(const Plan & plan) {

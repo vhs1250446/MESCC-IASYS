@@ -45,3 +45,4 @@ When designing and generating trajectory waypoints:
 
 - [PLAN_ACT_CONTRACT.md](PLAN_ACT_CONTRACT.md): Contract between Plan and Act (`/solution/plan`, `/solution/act_status`).
 - [SENSE_PLAN_CONTRACT.md](SENSE_PLAN_CONTRACT.md): Contract between Sense and Plan (`/solution/scene`, `/solution/sense_status`).
+- [PLAN_NODE.md](PLAN_NODE.md): Plan node decisions (entry permission, commitment, beacon-loss policy, fault latching), path construction and `PlanStatus` (`/solution/plan_status`).

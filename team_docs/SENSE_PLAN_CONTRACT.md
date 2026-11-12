@@ -107,6 +107,17 @@ Sense records the stamp of each raw message it last used. Plan passes
 Act can verify the age of the sensor data behind any active plan (the ≤ 0.5 s
 scene-age check defined in PLAN_ACT_CONTRACT).
 
+### Ego position
+
+| Field | Type | Meaning |
+|---|---|---|
+| `ego_x` | `float64` | m, map; rear-axle x from the odometry message at `odom_stamp` |
+
+Plan needs it for its commitment rule (front `ego_x + 0.9` past `entry_x`; see
+PLAN_NODE.md). Sense already holds the odometry for LiDAR projection, so this
+is a copy, not a new computation. Odometry is exact in this challenge
+(docs/INTERFACES.md).
+
 ### Beacon evidence
 
 | Field | Type | Meaning |
@@ -216,6 +227,8 @@ Plan distinguishes `SENSE_FAULT` from a stale scene:
    values before publishing; a stale bit is set if a scan cannot be used.
 7. `sense_state` is set even when `SENSE_FAULT = 255`, so logs capture the last
    known FSM state before the fault.
+8. `ego_x` is the odometry x at `odom_stamp`, and is always finite. Plan treats a
+   non-finite `ego_x` as `SENSE_FAULT`.
 
 ---
 

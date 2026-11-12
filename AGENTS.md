@@ -32,10 +32,11 @@ When designing or evaluating internal interfaces, state machines, or contracts, 
 - **How to (Re)generate Data:**
   - Run `python3 scripts/generate_plan_test_data.py`.
   - The generator strictly enforces:
-    - Upper bound $\le 250$ points (generates exactly 194 points).
+    - Upper bound $\le 250$ points (generates exactly 209 points; same grid as `path_builder.cpp`).
     - Exact stopping boundary waypoint at $x=23.8\text{ m}$ (front $x+0.9=24.7\text{ m} < 25.0\text{ m}$).
     - Exact goal waypoint at $(80.2, -1.75)$ with $v=0.0\text{ m/s}$.
-    - Quintic polynomial lateral spline ensuring opposing lane occupancy only within $x \in [26.0, 63.0]\text{ m}$.
+    - 16 m quintic lane-change ramps (26→42 m out, 51→67 m back); opposing-lane occupancy ($y+0.9>0$) only within $x \in [31.8, 61.0]\text{ m}$.
+    - Steering-slew speed cap: $v \cdot 2.4 \cdot |d\kappa/ds| \le 0.8 \times 0.6\text{ rad/s}$.
     - Kinematic limits: $a \le 1.5\text{ m/s}^2$, $a_{\text{brake}} \le 2.0\text{ m/s}^2$, $v_{\text{cruise}} = 3.8\text{ m/s}$.
 - **How to Stream / Publish Data to ACT:**
   - Using helper script (with QoS: reliable, volatile, depth 1 at 10 Hz):

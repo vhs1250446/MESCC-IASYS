@@ -38,148 +38,121 @@ os.makedirs(OUTPUT_DIR_YAML, exist_ok=True)
 os.makedirs(OUTPUT_DIR_JSON, exist_ok=True)
 
 
-def quintic_smooth_step(x, x0, x1, y0, y1):
-    """
-    Quintic polynomial transition ensuring C^2 continuity (zero 1st and 2nd derivatives).
-    tau = (x - x0) / (x1 - x0)
-    s(tau) = 10*tau^3 - 15*tau^4 + 6*tau^5
-    """
+# ---------------------------------------------------------------------------
+# Path model. Mirrors src/roadwork_student/src/path_builder.cpp exactly
+# (team_docs/PLAN_NODE.md "Path"); keep the two in sync.
+# ---------------------------------------------------------------------------
+START_X = 5.0
+GOAL_X, GOAL_Y = 80.2, -1.75
+OWN_Y, OPP_Y = -1.75, 1.75
+FRONT_OFFSET = 0.9
+WHEELBASE = 2.4
+MAX_STEER_RATE = 0.6
+GRID_SPACING = 0.4        # m in x; arc spacing stays <= 0.5 m on the ramps
+DENSE_SPACING = 0.2       # m in x, in the stopping zones
+DENSE_ZONE = 4.0          # m before the stop point and before the goal
+RAMP_START_OFFSET = 1.0   # m after entry_x
+POST_WORK_OFFSET = 2.0    # m after work_end
+RETURN_RAMP = 16.0        # m
+
+# Nominal beacon geometry (work_shift = 0) and Plan parameters (config/plan.yaml).
+GEO = dict(entry_x=25.0, work_start=42.0, work_end=49.0, exit_x=68.0)
+V_CRUISE, A_ACC, A_DEC, STOP_MARGIN, SLEW_MARGIN = 3.8, 1.4, 1.8, 0.3, 0.8
+STOP_X = GEO["entry_x"] - FRONT_OFFSET - STOP_MARGIN  # 23.8
+
+
+def ramp(x, x0, x1, y0, y1):
+    """Quintic smooth step s = 10t^3 - 15t^4 + 6t^5; returns y and its first three x-derivatives."""
     if x <= x0:
-        return y0
+        return y0, 0.0, 0.0, 0.0
     if x >= x1:
-        return y1
-    tau = (x - x0) / (x1 - x0)
-    s = 10.0 * (tau**3) - 15.0 * (tau**4) + 6.0 * (tau**5)
-    return y0 + (y1 - y0) * s
+        return y1, 0.0, 0.0, 0.0
+    L, d = x1 - x0, y1 - y0
+    t = (x - x0) / L
+    s = t**3 * (10.0 + t * (-15.0 + 6.0 * t))
+    s1 = 30.0 * t * t * (1.0 - t) ** 2
+    s2 = 60.0 * t * (1.0 - t) * (1.0 - 2.0 * t)
+    s3 = 60.0 - 360.0 * t + 360.0 * t * t
+    return y0 + d * s, d * s1 / L, d * s2 / L**2, d * s3 / L**3
+
+
+def lateral(x, g=GEO):
+    """Outbound ramp entry_x+1 -> work_start; return ramp work_end+2 -> +16 m."""
+    back_start = g["work_end"] + POST_WORK_OFFSET
+    if x < back_start:
+        return ramp(x, g["entry_x"] + RAMP_START_OFFSET, g["work_start"], OWN_Y, OPP_Y)
+    return ramp(x, back_start, back_start + RETURN_RAMP, OPP_Y, OWN_Y)
+
+
+def curvature_rate(x):
+    """Exact |dkappa/ds| = |d3*q - 3*d1*d2^2| / q^3 with q = 1 + d1^2."""
+    _, d1, d2, d3 = lateral(x)
+    q = 1.0 + d1 * d1
+    return abs(d3 * q - 3.0 * d1 * d2 * d2) / q**3
 
 
 def generate_waypoint_x_grid():
     """
-    Generates x-grid adhering strictly to:
-      - Start: x = 5.0 m
-      - Nominal spacing <= 0.5 m
-      - Denser spacing (~0.15 m) in deceleration & stopping zones:
-          Approaching stop line x = 23.8 m
-          Approaching goal x = 80.2 m
-      - Exact boundary waypoints: 23.8 m and 80.2 m
-      - Upper bound: <= 250 waypoints total
+    x grid: 0.4 m nominal, 0.2 m in the 4 m before the stop point and the goal,
+    exact stop point (23.8) and exact goal (80.2). 209 points (<= 250).
     """
     xs = []
 
-    # Segment 1: start (5.0 m) to 20.0 m (nominal 0.5 m spacing)
-    x = 5.0
-    while x < 20.0:
-        xs.append(round(x, 4))
-        x += 0.5
+    def fill(a, b, h):
+        if b - a <= 1e-9:
+            return
+        n = max(1, math.ceil((b - a) / h - 1e-9))
+        xs.extend(a + i * (b - a) / n for i in range(n))
 
-    # Segment 2: 20.0 m to 23.8 m (dense deceleration zone for stop line)
-    dense_steps_stop = round((23.8 - 20.0) / 0.15)
-    for i in range(dense_steps_stop):
-        xi = 20.0 + i * (23.8 - 20.0) / dense_steps_stop
-        xs.append(round(xi, 4))
-    xs.append(23.8)  # Exact stop line boundary waypoint
-
-    # Segment 3: 23.8 m to 75.0 m (nominal 0.5 m spacing)
-    x = 23.8 + 0.5
-    while x < 75.0:
-        xs.append(round(x, 4))
-        x += 0.5
-
-    # Segment 4: 75.0 m to 80.2 m (dense deceleration zone for goal)
-    dense_steps_goal = round((80.2 - 75.0) / 0.15)
-    for i in range(dense_steps_goal):
-        xi = 75.0 + i * (80.2 - 75.0) / dense_steps_goal
-        xs.append(round(xi, 4))
-    xs.append(80.2)  # Exact goal boundary waypoint
-
+    fill(START_X, STOP_X - DENSE_ZONE, GRID_SPACING)
+    fill(max(START_X, STOP_X - DENSE_ZONE), STOP_X, DENSE_SPACING)
+    fill(STOP_X, GOAL_X - DENSE_ZONE, GRID_SPACING)
+    fill(GOAL_X - DENSE_ZONE, GOAL_X, DENSE_SPACING)
+    xs.append(GOAL_X)
     return xs
 
 
 def generate_lateral_path(xs):
-    """
-    Computes y coordinates along the road:
-      - Own lane center: y = -1.75 m
-      - Opposing lane center: y = +1.75 m
-      - Bypass roadwork obstacles at x = 43.0 and 47.0
-      - Stay in own lane until x = 26.0 m (> stop line 25.0 m)
-      - Smooth transition to opposing lane between x = 26.0 and 38.0 m
-      - Opposing cruise between x = 38.0 and 51.0 m (giving > 1.6 m clearance to obstacles)
-      - Smooth transition back to own lane between x = 51.0 and 63.0 m (< exit line 68.0 m)
-      - Cruise to goal at y = -1.75 m
-    """
-    ys = []
-    for x in xs:
-        if x <= 26.0:
-            y = -1.75
-        elif x <= 38.0:
-            y = quintic_smooth_step(x, 26.0, 38.0, -1.75, 1.75)
-        elif x <= 51.0:
-            y = 1.75
-        elif x <= 63.0:
-            y = quintic_smooth_step(x, 51.0, 63.0, 1.75, -1.75)
-        else:
-            y = -1.75
-        ys.append(round(y, 4))
+    """Opposing-lane occupancy (y + 0.9 > 0) only inside the entry..exit region."""
+    ys = [lateral(x)[0] for x in xs]
+    ys[-1] = GOAL_Y
     return ys
 
 
-def compute_velocity_profile(xs, ys, v_max=3.8, a_acc=1.4, a_dec=1.8, stop_x=None, resume_from_stop=False):
+def compute_velocity_profile(xs, ys, v_max=V_CRUISE, a_acc=A_ACC, a_dec=A_DEC,
+                             stop_line=False, accel_x=START_X, accel_v=0.0):
     """
-    Computes bounded kinematic speed profile (forward acceleration and backward deceleration).
-    Guarantees:
-      - acceleration <= a_acc (limit 1.5 m/s^2)
-      - deceleration <= a_dec (limit 2.0 m/s^2)
-      - speeds <= v_max
-      - exact stop at stop_x (if given) and at goal (80.2 m)
+    Caps: v_max, steering slew (v * 2.4 * max|dkappa/ds| <= 0.8 * 0.6 rad/s over each
+    point's neighbourhood), 0 at/after the stop point when stop_line, 0 at the goal.
+    Forward pass at a_acc from (accel_x, accel_v); backward pass at a_dec.
     """
     n = len(xs)
-    ds = [0.0] * n
-    for i in range(n - 1):
-        dx = xs[i+1] - xs[i]
-        dy = ys[i+1] - ys[i]
-        ds[i] = math.hypot(dx, dy)
+    ds = [math.hypot(xs[i + 1] - xs[i], ys[i + 1] - ys[i]) for i in range(n - 1)] + [0.0]
+    cap = [v_max] * n
+    for i in range(n):
+        a, b = xs[max(i - 1, 0)], xs[min(i + 1, n - 1)]
+        kp = max(curvature_rate(a + (b - a) * k / 8) for k in range(9))
+        if WHEELBASE * kp > 1e-9:
+            cap[i] = min(cap[i], SLEW_MARGIN * MAX_STEER_RATE / (WHEELBASE * kp))
+        if stop_line and xs[i] >= STOP_X - 1e-9:
+            cap[i] = 0.0
+    cap[-1] = 0.0
 
-    # Forward pass: acceleration from rest or initial speed
-    v_fwd = [0.0] * n
-    if resume_from_stop and stop_x is not None:
-        # Start accelerating after stop_x
-        for i in range(n):
-            if xs[i] <= stop_x:
-                v_fwd[i] = 0.0
-            else:
-                prev = v_fwd[i-1]
-                v_fwd[i] = min(v_max, math.sqrt(prev**2 + 2 * a_acc * ds[i-1]))
-    else:
-        v_fwd[0] = 0.0
-        for i in range(n - 1):
-            v_fwd[i+1] = min(v_max, math.sqrt(v_fwd[i]**2 + 2 * a_acc * ds[i]))
-
-    # Backward pass: braking to 0 at stop points
-    v_bwd = [v_max] * n
-    if stop_x is not None and not resume_from_stop:
-        for i in range(n):
-            if xs[i] >= stop_x:
-                v_bwd[i] = 0.0
-    else:
-        v_bwd[-1] = 0.0  # Stop at goal
-
+    i0 = max([i for i in range(n) if xs[i] <= accel_x + 1e-9] or [0])
+    v = [0.0] * n
+    for i in range(i0 + 1):
+        v[i] = min(cap[i], max(0.0, accel_v))
+    for i in range(i0, n - 1):
+        v[i + 1] = min(cap[i + 1], math.sqrt(v[i] ** 2 + 2.0 * a_acc * ds[i]))
     for i in range(n - 2, -1, -1):
-        v_bwd[i] = min(v_bwd[i], math.sqrt(v_bwd[i+1]**2 + 2 * a_dec * ds[i]))
-
-    speeds = [round(min(v_fwd[i], v_bwd[i]), 3) for i in range(n)]
-    return speeds
+        v[i] = min(v[i], math.sqrt(v[i + 1] ** 2 + 2.0 * a_dec * ds[i]))
+    return v
 
 
 def build_plan_points(xs, ys, speeds):
-    """Creates a list of dicts representing PlanPoint objects."""
-    points = []
-    for x, y, v in zip(xs, ys, speeds):
-        points.append({
-            "x": float(x),
-            "y": float(y),
-            "speed": float(v)
-        })
-    return points
+    """Creates a list of dicts representing PlanPoint objects (rounded for readability)."""
+    return [{"x": round(float(x), 4), "y": round(float(y), 4), "speed": round(float(v), 3)}
+            for x, y, v in zip(xs, ys, speeds)]
 
 
 def make_plan_dict(header_stamp, scene_stamp, valid_until, seq, mode,
@@ -228,7 +201,7 @@ def main():
     # -------------------------------------------------------------
     # 1. Nominal Full Course (4.0 m/s limit)
     # -------------------------------------------------------------
-    nominal_speeds = compute_velocity_profile(xs, ys, v_max=3.8, a_acc=1.4, a_dec=1.8)
+    nominal_speeds = compute_velocity_profile(xs, ys)
     nominal_points = build_plan_points(xs, ys, nominal_speeds)
     plan_01 = make_plan_dict(
         header_stamp=base_stamp,
@@ -240,14 +213,14 @@ def main():
         speed_limit=4.0,
         has_stop_line=False,
         stop_line_x=0.0,
-        decision_state="NOMINAL_TRACKING"
+        decision_state="ENTRY_GO"
     )
     save_test_plan("01_nominal_full_course", plan_01)
 
     # -------------------------------------------------------------
     # 2. Nominal Reduced Speed (3.0 m/s limit from beacon)
     # -------------------------------------------------------------
-    reduced_speeds = compute_velocity_profile(xs, ys, v_max=2.9, a_acc=1.2, a_dec=1.5)
+    reduced_speeds = compute_velocity_profile(xs, ys, v_max=min(3.0, V_CRUISE))
     reduced_points = build_plan_points(xs, ys, reduced_speeds)
     plan_02 = make_plan_dict(
         header_stamp=base_stamp,
@@ -266,7 +239,7 @@ def main():
     # -------------------------------------------------------------
     # 3. Stop-Line Active (Enforced at x=25.0, stopping waypoint at x=23.8)
     # -------------------------------------------------------------
-    stop_speeds = compute_velocity_profile(xs, ys, v_max=3.8, a_acc=1.4, a_dec=1.8, stop_x=23.8)
+    stop_speeds = compute_velocity_profile(xs, ys, stop_line=True)
     stop_points = build_plan_points(xs, ys, stop_speeds)
     plan_03 = make_plan_dict(
         header_stamp=base_stamp,
@@ -278,14 +251,14 @@ def main():
         speed_limit=4.0,
         has_stop_line=True,
         stop_line_x=25.0,
-        decision_state="WAITING_BEFORE_ENTRY_LINE"
+        decision_state="HOLD_AT_ENTRY"
     )
     save_test_plan("03_stop_line_hold", plan_03)
 
     # -------------------------------------------------------------
     # 4. Stop-Line Cleared (Resuming motion into work area)
     # -------------------------------------------------------------
-    resume_speeds = compute_velocity_profile(xs, ys, v_max=3.8, a_acc=1.4, a_dec=1.8, stop_x=23.8, resume_from_stop=True)
+    resume_speeds = compute_velocity_profile(xs, ys, accel_x=STOP_X, accel_v=0.0)
     resume_points = build_plan_points(xs, ys, resume_speeds)
     plan_04 = make_plan_dict(
         header_stamp={"sec": 10, "nanosec": 0},
@@ -297,7 +270,7 @@ def main():
         speed_limit=4.0,
         has_stop_line=False,
         stop_line_x=0.0,
-        decision_state="RESUMING_MOTION_AFTER_STOP"
+        decision_state="ENTRY_GO"
     )
     save_test_plan("04_stop_line_cleared", plan_04)
 
@@ -314,7 +287,7 @@ def main():
         speed_limit=4.0,
         has_stop_line=False,
         stop_line_x=0.0,
-        decision_state="PLAN_MODE_STOP"
+        decision_state="SCENE_STALE"
     )
     save_test_plan("05_mode_stop", plan_05)
 
@@ -331,7 +304,7 @@ def main():
         speed_limit=4.0,
         has_stop_line=False,
         stop_line_x=0.0,
-        decision_state="PLAN_FATAL_FAULT"
+        decision_state="FAULT"
     )
     save_test_plan("06_mode_fault", plan_06)
 

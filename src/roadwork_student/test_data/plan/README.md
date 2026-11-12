@@ -29,7 +29,7 @@ uint8 MODE_TRACK = 1                # track path under speed profile and constra
 uint8 MODE_FAULT = 255              # unrecoverable fault; emergency stop
 uint8 mode
 
-PlanPoint[<=250] path               # bounded waypoint array (<= 250 points, 194 points generated)
+PlanPoint[<=250] path               # bounded waypoint array (<= 250 points, 209 points generated)
 float64 speed_limit                 # m/s (nominal 4.0 or beacon value, e.g. 3.0)
 
 bool has_stop_line                  # true when waiting before entry line
@@ -73,22 +73,25 @@ float64 speed                       # m/s, target speed when rear axle is at (x,
 All generated paths strictly enforce the contract invariants:
 
 1. **Deterministic Bounded Size:**
-   All paths contain exactly **194 waypoints**, satisfying the bounded IDL condition `PlanPoint[<=250] path` with zero dynamic reallocation.
+   All paths contain exactly **209 waypoints**, satisfying the bounded IDL condition `PlanPoint[<=250] path` with zero dynamic reallocation.
 2. **Dense Stopping Zones & Quantization Safety:**
-   - Approaching stop line: $\Delta x \approx 0.15\text{ m}$ between $x = 20.0\text{ m}$ and $x = 23.8\text{ m}$.
-   - Approaching goal: $\Delta x \approx 0.15\text{ m}$ between $x = 75.0\text{ m}$ and $x = 80.2\text{ m}$.
-   - Nominal cruise spacing: $\Delta x \le 0.50\text{ m}$.
+   - Approaching stop line: $\Delta x = 0.2\text{ m}$ between $x = 19.8\text{ m}$ and $x = 23.8\text{ m}$.
+   - Approaching goal: $\Delta x = 0.2\text{ m}$ between $x = 76.2\text{ m}$ and $x = 80.2\text{ m}$.
+   - Nominal spacing: $\Delta x = 0.4\text{ m}$, so the arc length between points stays $\le 0.5\text{ m}$ on the lane-change ramps (max 0.432 m).
+   - Leaving a standstill (at 5.0 or 23.8 m), the first 0.4 m step jumps to about 1.06 m/s; Act interpolates speed along the path, so this is a target step, not a command step.
 3. **Exact Boundary Waypoints:**
    - Stop line waypoint: exactly $(23.8, -1.75)$ with $v = 0.0\text{ m/s}$, ensuring vehicle front ($x+0.9 = 24.7\text{ m}$) never touches $x = 25.0\text{ m}$.
    - Goal waypoint: exactly $(80.2, -1.75)$ with $v = 0.0\text{ m/s}$.
 4. **Kinematic Bounds:**
-   - Longitudinal acceleration: $\le 1.41\text{ m/s}^2$ (below challenge limit $1.5\text{ m/s}^2$).
+   - Longitudinal acceleration: $\le 1.40\text{ m/s}^2$ (below challenge limit $1.5\text{ m/s}^2$).
    - Longitudinal braking: $\le 1.81\text{ m/s}^2$ (below contract limit $2.0\text{ m/s}^2$).
    - Maximum nominal speed: $3.80\text{ m/s}$ (comfortably below challenge limit $4.0\text{ m/s}$ and Act cap $3.9\text{ m/s}$).
 5. **Opposing Lane Safety ($y \in [-3.5, +3.5]$):**
-   - Lateral transition into opposing lane ($y = +1.75\text{ m}$) takes place between $x = 26.0\text{ m}$ and $x = 38.0\text{ m}$ (well past entry line $x = 25.0\text{ m}$).
-   - Return transition to own lane ($y = -1.75\text{ m}$) occurs between $x = 51.0\text{ m}$ and $x = 63.0\text{ m}$ (well before exit line $x = 68.0\text{ m}$).
-   - Maximum steering curvature requires steering angle $\approx 0.30\text{ rad}$ (well within $\pm 0.45\text{ rad}$ clamp).
+   - Outbound 16 m quintic ramp from $x = 26.0\text{ m}$ (entry + 1) to $x = 42.0\text{ m}$ (work_start); hold $y = +1.75\text{ m}$ to $x = 51.0\text{ m}$ (work_end + 2).
+   - Return 16 m quintic ramp from $x = 51.0\text{ m}$ to $x = 67.0\text{ m}$ ($\le$ exit line $x = 68.0\text{ m}$).
+   - Opposing-lane occupancy ($y + 0.9 > 0$) only for $x \in [31.8, 61.0]\text{ m}$.
+   - Maximum steering angle $\approx 0.18\text{ rad}$ (clamp $\pm 0.45\text{ rad}$).
+   - Maximum steering rate at 3.8 m/s $\approx 0.47\text{ rad/s}$ (limit 0.6 rad/s; the profile caps speed so that it never exceeds $0.8 \times 0.6$).
 
 ---
 

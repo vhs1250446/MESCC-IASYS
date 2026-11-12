@@ -9,6 +9,10 @@ builtin_interfaces/Time radar_stamp    # stamp of the most recent radar message 
 builtin_interfaces/Time camera_stamp   # stamp of the most recent camera image used
 builtin_interfaces/Time beacon_stamp   # stamp of the most recent beacon message used
 
+# ── Ego position ──────────────────────────────────────────────────────────────
+# Plan needs it for the commitment rule (front = ego_x + 0.9 past entry_x).
+float64 ego_x                      # m, map; rear-axle x from the odometry at odom_stamp
+
 # ── Beacon evidence ───────────────────────────────────────────────────────────
 # Geometry fields may be cached after beacon_valid goes false (Plan decides caching policy).
 # Plan computes its own expiry: beacon_stamp + 1.2 s (valid_for is a fixed project constant).
