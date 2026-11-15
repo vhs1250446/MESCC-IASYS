@@ -4,6 +4,7 @@ project(roadwork_student)
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(nav_msgs REQUIRED)
+find_package(sensor_msgs REQUIRED)
 find_package(roadwork_interfaces REQUIRED)
 find_package(roadwork_solution_msgs REQUIRED)
 find_package(builtin_interfaces REQUIRED)
@@ -18,7 +19,8 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_executable(sense_node src/sense_node.cpp)
-ament_target_dependencies(sense_node rclcpp roadwork_solution_msgs)
+ament_target_dependencies(sense_node rclcpp nav_msgs sensor_msgs roadwork_interfaces
+  roadwork_solution_msgs builtin_interfaces)
 install(TARGETS sense_node DESTINATION lib/${PROJECT_NAME})
 
 # Pure Plan logic (no node, no clock): linked by plan_node and the gtests.
