@@ -1,0 +1,28 @@
+@startuml architecture
+left to right direction
+
+label "/lidar/scan" as lidar
+label "/camera/image_raw" as camera
+label "/infra/roadwork/beacon" as beacon
+label "/vehicle/odometry" as odom
+
+rectangle "SENSE" as sense
+rectangle "PLAN" as plan
+rectangle "ACT" as act
+rectangle "SIMULATOR\n(+ /clock)" as sim
+
+lidar --> sense
+camera --> sense
+beacon --> sense
+odom --> sense
+odom --> act
+
+sense --> plan : /solution/scene\nScene, 10 Hz
+plan --> act : /solution/plan\nPlan, 10 Hz, valid 0.3 s
+act --> sim : /vehicle/command\n20 Hz, only publisher
+
+label "/solution/path\n/solution/state\n/solution/plan_status" as plan_tel
+label "/solution/act_status" as act_tel
+plan ..> plan_tel
+act ..> act_tel
+@enduml

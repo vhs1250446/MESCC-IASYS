@@ -1,0 +1,33 @@
+@startuml decision_model
+
+hide empty description
+
+state ACTIVE {
+  [*] --> INIT
+  INIT : mode STOP
+  HOLD : stop line on
+  ENTRY_GO : stop line off
+  COMMITTED : until goal
+
+  INIT -right-> HOLD : [geometry cached]
+  HOLD -right-> ENTRY_GO : [all entry checks pass]
+  ENTRY_GO -left-> HOLD : [any entry check fails]
+  ENTRY_GO -right-> COMMITTED : [front > entry_x]
+}
+
+note bottom of ACTIVE
+  **Entry checks (all must pass)**
+  * Panel shows GO
+  * Beacon fresh
+  * Camera fresh
+  * LiDAR fresh
+  * Lane clear
+end note
+
+SAFE_STOP : mode STOP
+FAULT : mode FAULT
+
+ACTIVE -down-> SAFE_STOP : [scene stale or invalid]
+SAFE_STOP -up-> ACTIVE : [scene valid again]
+ACTIVE -down-> FAULT : [invalid path]
+@enduml
